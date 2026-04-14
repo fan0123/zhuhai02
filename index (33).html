@@ -1,0 +1,3018 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五一珠海·澳门·桂山岛 3日深度游攻略 2026</title>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --primary: #FF6B6B;
+  --accent: #4ECDC4;
+  --gold: #FFD93D;
+  --dark: #2d3436;
+  --gray: #f8f9fa;
+  --text-muted: #636e72;
+  --shadow: 0 8px 32px rgba(0,0,0,0.12);
+  --shadow-hover: 0 16px 48px rgba(0,0,0,0.18);
+  --radius: 16px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ===== STICKY HEADER ===== */
+#site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 0 24px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: box-shadow var(--transition);
+}
+#site-header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+.header-logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; }
+.header-logo span { color: var(--accent); }
+nav { display: flex; gap: 4px; }
+nav a {
+  padding: 8px 12px; border-radius: 8px; text-decoration: none;
+  color: var(--dark); font-size: 0.85rem; font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+nav a:hover { background: var(--gray); color: var(--primary); }
+.nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); }
+
+/* ===== HERO SECTION ===== */
+#hero {
+  position: relative; width: 100%; height: 100vh; min-height: 600px;
+  overflow: hidden; margin-top: 64px;
+}
+.hero-carousel { position: relative; width: 100%; height: 100%; }
+.hero-slide {
+  position: absolute; inset: 0; opacity: 0;
+  transition: opacity 1.2s ease; z-index: 1;
+}
+.hero-slide.active { opacity: 1; z-index: 2; }
+.hero-slide img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(0.65);
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 24px;
+}
+.hero-badge {
+  background: var(--gold); color: var(--dark);
+  padding: 6px 20px; border-radius: 100px;
+  font-size: 0.85rem; font-weight: 700;
+  margin-bottom: 20px; display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 900; color: #fff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  line-height: 1.15; margin-bottom: 16px;
+  animation: slideUp 0.8s ease both;
+}
+.hero-title .highlight { color: var(--gold); }
+@keyframes slideUp { from{transform:translateY(30px);opacity:0} to{transform:translateY(0);opacity:1} }
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: rgba(255,255,255,0.92); margin-bottom: 32px;
+  animation: slideUp 0.8s 0.2s ease both;
+}
+.hero-cta {
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  animation: slideUp 0.8s 0.4s ease both;
+}
+.btn {
+  padding: 14px 28px; border-radius: 100px; text-decoration: none;
+  font-weight: 700; font-size: 1rem; cursor: pointer; border: none;
+  transition: all var(--transition); display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 4px 20px rgba(255,107,107,0.4); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,107,107,0.5); }
+.btn-outline { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.6); backdrop-filter: blur(4px); }
+.btn-outline:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
+.hero-dots {
+  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+  z-index: 10; display: flex; gap: 8px;
+}
+.hero-dot {
+  width: 8px; height: 8px; border-radius: 100px;
+  background: rgba(255,255,255,0.4); cursor: pointer;
+  transition: all var(--transition); border: none;
+}
+.hero-dot.active { width: 24px; background: #fff; }
+
+/* ===== SECTION WRAPPER ===== */
+section { padding: 80px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-tag {
+  display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff; padding: 4px 16px; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; letter-spacing: 1px;
+}
+.section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--dark); margin-bottom: 12px; }
+.section-subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+/* ===== FADE-IN ANIMATION ===== */
+.fade-in { opacity: 0; transform: translateY(32px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== TRIP OVERVIEW CARDS ===== */
+.overview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.overview-card {
+  background: #fff; border-radius: var(--radius); padding: 32px 24px;
+  box-shadow: var(--shadow); text-align: center; position: relative; overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.overview-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.overview-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+}
+.overview-card:nth-child(1)::before { background: linear-gradient(90deg, var(--primary), #FF8E53); }
+.overview-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent), #45B7AA); }
+.overview-card:nth-child(3)::before { background: linear-gradient(90deg, var(--gold), #FFC107); }
+.day-number {
+  font-size: 3.5rem; font-weight: 900; line-height: 1;
+  margin-bottom: 8px;
+}
+.overview-card:nth-child(1) .day-number { color: var(--primary); }
+.overview-card:nth-child(2) .day-number { color: var(--accent); }
+.overview-card:nth-child(3) .day-number { color: var(--gold); }
+.day-label { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+.day-title { font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+.day-stops { list-style: none; }
+.day-stops li { padding: 6px 0; color: var(--text-muted); font-size: 0.9rem; border-bottom: 1px dashed #f0f0f0; }
+.day-stops li:last-child { border-bottom: none; }
+.day-tag {
+  display: inline-block; padding: 4px 12px; border-radius: 100px;
+  font-size: 0.75rem; font-weight: 700; margin-top: 16px;
+}
+.overview-card:nth-child(1) .day-tag { background: rgba(255,107,107,0.1); color: var(--primary); }
+.overview-card:nth-child(2) .day-tag { background: rgba(78,205,196,0.1); color: var(--accent); }
+.overview-card:nth-child(3) .day-tag { background: rgba(255,217,61,0.15); color: #C8960C; }
+
+/* ===== DAY TABS ===== */
+.tabs-nav {
+  display: flex; gap: 8px; margin-bottom: 40px;
+  background: var(--gray); padding: 8px; border-radius: 16px;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  flex: 1; min-width: 120px; padding: 14px 20px; border-radius: 12px;
+  border: none; background: transparent; cursor: pointer;
+  font-size: 0.95rem; font-weight: 600; color: var(--text-muted);
+  transition: all var(--transition); text-align: center;
+}
+.tab-btn.active { background: #fff; color: var(--primary); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.tab-content { display: none; animation: fadeTab 0.4s ease both; }
+.tab-content.active { display: block; }
+@keyframes fadeTab { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; padding-left: 48px; }
+.timeline::before {
+  content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(180deg, var(--primary), var(--accent));
+}
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-dot {
+  position: absolute; left: -36px; top: 4px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #fff; border: 3px solid var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 700; color: var(--primary);
+  z-index: 1;
+}
+.timeline-time {
+  font-size: 0.8rem; font-weight: 700; color: var(--primary);
+  background: rgba(255,107,107,0.08); padding: 2px 10px; border-radius: 100px;
+  display: inline-block; margin-bottom: 6px;
+}
+.timeline-title { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+.timeline-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+/* 傻饭计划 Logo */
+.sillyfan-logo { display:inline-flex;flex-direction:column;align-items:center;gap:10px;cursor:default; }
+.sillyfan-box { background:linear-gradient(135deg,#FF6B00 0%,#FF9500 100%);border-radius:18px;padding:14px 36px;box-shadow:0 6px 0 #CC4400,0 10px 30px rgba(255,107,0,0.4);border:3px solid rgba(255,255,255,0.25);position:relative;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s; }
+.sillyfan-box:hover { transform:translateY(-3px);box-shadow:0 9px 0 #CC4400,0 14px 35px rgba(255,107,0,0.5); }
+.sillyfan-box::before { content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,0.2),transparent);border-radius:16px 16px 0 0;pointer-events:none; }
+.sillyfan-box::after { content:'🍚';position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:1.8rem;opacity:0.35;pointer-events:none; }
+.sillyfan-text { font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:900;color:#fff;letter-spacing:4px;text-shadow:0 2px 0 rgba(0,0,0,0.2),0 4px 12px rgba(0,0,0,0.15);display:block;line-height:1.2;position:relative;z-index:1; }
+.sillyfan-en { font-size:0.7rem;font-weight:800;letter-spacing:6px;color:rgba(255,140,0,0.9);text-transform:uppercase;background:rgba(255,255,255,0.95);padding:3px 16px;border-radius:100px;border:1.5px solid rgba(255,107,0,0.3); }
+.timeline-tips {
+  margin-top: 10px; padding: 10px 14px;
+  background: rgba(78,205,196,0.08); border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0; font-size: 0.85rem; color: var(--dark);
+}
+
+/* ===== ATTRACTION CARDS ===== */
+.attractions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.attraction-card {
+  background: #fff; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); transition: transform var(--transition), box-shadow var(--transition);
+}
+.attraction-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.mini-carousel { position: relative; height: 220px; overflow: hidden; background: var(--gray); }
+.mini-carousel-track { display: flex; height: 100%; transition: transform 0.4s ease; }
+.mini-carousel-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
+.mini-carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+.mini-carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.9); border: none; cursor: pointer;
+  font-size: 1rem; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all var(--transition);
+  z-index: 5;
+}
+.mini-carousel-btn:hover { background: #fff; transform: translateY(-50%) scale(1.1); }
+.mini-carousel-prev { left: 10px; }
+.mini-carousel-next { right: 10px; }
+.mini-carousel-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; z-index: 5; }
+.mini-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.2s; border: none; }
+.mini-dot.active { background: #fff; width: 14px; border-radius: 3px; }
+.attraction-info { padding: 20px 24px; }
+.attraction-tag {
+  display: inline-block; padding: 3px 10px; border-radius: 100px;
+  font-size: 0.75rem; font-weight: 700; background: rgba(255,107,107,0.1);
+  color: var(--primary); margin-bottom: 10px;
+}
+.attraction-name { font-size: 1.25rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.attraction-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px; line-height: 1.7; }
+.attraction-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+.meta-item { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+.meta-item strong { color: var(--dark); }
+
+/* ===== HOTEL CARDS ===== */
+.hotel-warning {
+  background: linear-gradient(135deg, #FFF3CD, #FFE69C);
+  border: 2px solid var(--gold); border-radius: var(--radius);
+  padding: 20px 24px; margin-bottom: 40px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.hotel-warning-icon { font-size: 1.5rem; flex-shrink: 0; }
+.hotel-warning-text { font-size: 0.95rem; color: #856404; line-height: 1.6; }
+.hotel-warning-text strong { font-weight: 700; }
+.hotels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.hotel-card {
+  background: #fff; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); transition: transform var(--transition), box-shadow var(--transition);
+  display: flex; flex-direction: column;
+}
+.hotel-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.hotel-img {
+  height: 140px; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+}
+.hotel-img img { width: 100%; height: 100%; object-fit: cover; }
+.hotel-badge {
+  position: absolute; top: 10px; right: 10px;
+  background: var(--primary); color: #fff;
+  padding: 4px 10px; border-radius: 100px;
+  font-size: 0.75rem; font-weight: 700;
+}
+.hotel-info { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.hotel-name { font-size: 1rem; font-weight: 800; color: var(--dark); line-height: 1.3; }
+.hotel-stars { color: var(--gold); font-size: 0.9rem; }
+.hotel-stars span { color: var(--text-muted); font-size: 0.8rem; margin-left: 4px; }
+.hotel-location { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 4px; }
+.hotel-price-row { display: flex; flex-direction: column; gap: 2px; }
+.hotel-price { font-size: 0.8rem; color: var(--text-muted); text-decoration: line-through; }
+.hotel-price-may { font-size: 1.1rem; font-weight: 800; color: var(--primary); }
+.hotel-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.hotel-tag {
+  padding: 2px 8px; border-radius: 100px;
+  font-size: 0.72rem; font-weight: 600;
+  background: rgba(78,205,196,0.1); color: var(--accent);
+}
+.hotel-highlight { font-size: 0.8rem; color: #555; line-height: 1.5; font-style: italic; }
+.hotel-btn {
+  display: block; text-align: center; padding: 10px 16px;
+  background: linear-gradient(135deg, var(--primary), #FF8E53);
+  color: #fff; text-decoration: none; font-weight: 700; font-size: 0.85rem;
+  margin: 12px 16px 16px; border-radius: 10px;
+  transition: all var(--transition);
+}
+.hotel-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.booking-cta-box {
+  background: var(--gray); border-radius: var(--radius);
+  padding: 28px 32px; margin-top: 40px; text-align: center;
+}
+.booking-cta-box p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.7; }
+.booking-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.booking-btn {
+  padding: 14px 32px; border-radius: 12px; text-decoration: none;
+  font-weight: 700; font-size: 1rem; transition: all var(--transition);
+}
+.booking-btn-primary { background: var(--primary); color: #fff; box-shadow: 0 4px 16px rgba(255,107,107,0.3); }
+.booking-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,107,0.4); }
+.booking-btn-secondary { background: #fff; color: var(--accent); border: 2px solid var(--accent); }
+.booking-btn-secondary:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
+
+/* ===== FOOD SECTION ===== */
+.food-tabs-nav { display: flex; gap: 8px; margin-bottom: 32px; justify-content: center; }
+.food-tab-btn {
+  padding: 12px 28px; border-radius: 100px; border: 2px solid transparent;
+  cursor: pointer; font-size: 1rem; font-weight: 700;
+  transition: all var(--transition); background: var(--gray); color: var(--text-muted);
+}
+.food-tab-btn.active { background: var(--primary); color: #fff; box-shadow: 0 4px 16px rgba(255,107,107,0.3); }
+.food-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.food-card {
+  background: #fff; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); transition: transform var(--transition), box-shadow var(--transition);
+}
+.food-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.food-img { height: 180px; overflow: hidden; position: relative; }
+.food-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.food-card:hover .food-img img { transform: scale(1.06); }
+.food-price-badge {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(0,0,0,0.75); color: #fff;
+  padding: 4px 12px; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 700;
+}
+.food-info { padding: 18px 20px; }
+.food-category { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; }
+.food-name { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.food-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 6px; }
+.food-dishes { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.6; }
+.food-dishes strong { color: var(--dark); }
+.food-address { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: flex-start; gap: 4px; }
+.food-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+.food-tag { padding: 2px 8px; border-radius: 100px; font-size: 0.72rem; font-weight: 600; background: rgba(255,107,107,0.08); color: var(--primary); }
+.food-xhs { 
+  font-size: 0.82rem; color: #555; line-height: 1.5;
+  padding: 10px 12px; background: rgba(78,205,196,0.06);
+  border-radius: 8px; border-left: 3px solid var(--accent);
+  font-style: italic;
+}
+.food-map-link { display: block; text-align: center; padding: 8px; margin-top: 10px; border-radius: 8px; background: var(--gray); color: var(--text-muted); font-size: 0.82rem; text-decoration: none; transition: all var(--transition); }
+.food-map-link:hover { background: var(--accent); color: #fff; }
+
+/* ===== MAPS SECTION ===== */
+.maps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.map-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.map-title { padding: 16px 20px; font-size: 1rem; font-weight: 800; color: var(--dark); background: var(--gray); display: flex; align-items: center; gap: 8px; }
+.map-card svg { display: block; width: 100%; height: auto; }
+
+/* ===== BUDGET CALCULATOR ===== */
+.budget-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.budget-chart-wrapper { position: relative; width: 100%; max-width: 320px; margin: 0 auto; }
+.budget-chart-wrapper svg { width: 100%; height: auto; }
+.budget-total-label {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  text-align: center;
+}
+.budget-total-amount { font-size: 2rem; font-weight: 900; color: var(--dark); display: block; }
+.budget-total-text { font-size: 0.85rem; color: var(--text-muted); }
+.budget-legend { display: flex; flex-direction: column; gap: 14px; }
+.budget-item { display: flex; align-items: center; gap: 12px; }
+.budget-color { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.budget-item-info { flex: 1; }
+.budget-item-name { font-size: 0.9rem; font-weight: 600; color: var(--dark); }
+.budget-item-amount { font-size: 0.85rem; color: var(--text-muted); }
+.budget-item-pct { font-size: 0.85rem; color: var(--text-muted); margin-left: auto; font-weight: 600; }
+.budget-sliders { margin-top: 32px; padding: 28px; background: var(--gray); border-radius: var(--radius); }
+.budget-sliders h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: 20px; }
+.slider-group { margin-bottom: 20px; }
+.slider-group label { font-size: 0.9rem; font-weight: 600; color: var(--dark); display: flex; justify-content: space-between; margin-bottom: 10px; }
+.slider-group label span { color: var(--primary); }
+input[type="range"] {
+  -webkit-appearance: none; width: 100%; height: 6px;
+  border-radius: 3px; background: #ddd; outline: none; cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--primary); box-shadow: 0 2px 8px rgba(255,107,107,0.4); cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track { border-radius: 3px; }
+
+/* ===== CHECKLIST ===== */
+.checklist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.checklist-group { background: #fff; border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+.checklist-group-title { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+.checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; cursor: pointer; transition: background var(--transition); border-radius: 8px; padding-left: 8px; }
+.checklist-item:last-child { border-bottom: none; }
+.checklist-item:hover { background: var(--gray); }
+.checklist-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); flex-shrink: 0; margin-top: 2px; cursor: pointer; }
+.checklist-item-text { font-size: 0.9rem; color: var(--dark); line-height: 1.5; }
+.checklist-item-text small { color: var(--text-muted); display: block; font-size: 0.8rem; }
+.checklist-item.checked .checklist-item-text { text-decoration: line-through; color: var(--text-muted); }
+
+/* ===== BACK TO TOP ===== */
+#back-to-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--primary); color: #fff; border: none; cursor: pointer;
+  font-size: 1.2rem; box-shadow: 0 4px 16px rgba(255,107,107,0.4);
+  transition: all var(--transition); z-index: 999;
+  opacity: 0; pointer-events: none; transform: translateY(20px);
+  display: flex; align-items: center; justify-content: center;
+}
+#back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+#back-to-top:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255,107,107,0.5); }
+
+/* ===== BG VARIATIONS ===== */
+.bg-gray { background: var(--gray); }
+.bg-gradient { background: linear-gradient(135deg, #fff8f8, #f0fffe); }
+
+/* ===== SECTION DIVIDER ===== */
+.wave-divider { overflow: hidden; line-height: 0; }
+.wave-divider svg { display: block; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark); color: #aaa;
+  padding: 40px 24px; text-align: center;
+}
+footer a { color: var(--accent); text-decoration: none; }
+.footer-logo { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 8px; }
+.footer-desc { font-size: 0.9rem; margin-bottom: 20px; line-height: 1.7; }
+.footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+.footer-links a { font-size: 0.9rem; }
+.footer-copy { font-size: 0.8rem; color: #666; }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav { display: none; }
+  nav.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid #eee; padding: 12px; gap: 4px; z-index: 999; }
+  .nav-toggle { display: block; }
+  .overview-grid { grid-template-columns: 1fr; }
+  .attractions-grid { grid-template-columns: 1fr; }
+  .hotels-grid { grid-template-columns: repeat(2, 1fr); }
+  .food-grid { grid-template-columns: 1fr; }
+  .maps-grid { grid-template-columns: 1fr; }
+  .budget-wrapper { grid-template-columns: 1fr; }
+  .checklist-grid { grid-template-columns: 1fr; }
+  .tabs-nav { gap: 4px; }
+  .tab-btn { min-width: 80px; font-size: 0.85rem; padding: 12px 10px; }
+  section { padding: 48px 0; }
+  .booking-btns { flex-direction: column; align-items: center; }
+}
+@media (max-width: 480px) {
+  .hotels-grid { grid-template-columns: 1fr; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .btn { width: 100%; max-width: 280px; justify-content: center; }
+}
+/* ===== LANDMARK CARDS ===== */
+.landmark-scroll::-webkit-scrollbar { display: none; }
+.landmark-card {
+  flex: 0 0 100%; width:100%; border-radius: 0; overflow: hidden;
+  background: #fff; box-shadow: none;
+  cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+}
+.landmark-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.18); }
+.lm-img-wrap { position: relative; height: clamp(320px,50vw,520px); overflow: hidden; background: #f0f0f0; }
+.lm-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.landmark-card:hover .lm-img-wrap img { transform: scale(1.06); }
+.lm-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%); display: flex; align-items: flex-end; padding: 12px; }
+.lm-icon { font-size: 1.5rem; }
+.lm-info { padding: 14px 16px; }
+.lm-name { font-weight: 800; font-size: 0.95rem; color: #2d3436; margin-bottom: 4px; }
+.lm-desc { font-size: 0.8rem; color: #636e72; line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<!-- STICKY HEADER -->
+<header id="site-header">
+  <div class="header-logo">🏖️ 珠海·<span>澳门</span>·桂山岛</div>
+  <nav id="main-nav">
+    <a href="#overview">行程总览</a>
+    <a href="#itinerary">每日行程</a>
+    <a href="#hotels">住宿推荐</a>
+    <a href="#food">美食地图</a>
+    <a href="#maps">路线地图</a>
+    <a href="#budget">费用预算</a>
+    <a href="#checklist">出行清单</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()">☰</button>
+</header>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="hero-carousel" id="heroCarousel">
+    <div class="hero-slide active">
+      <img src="https://sns-webpic-qc.xhscdn.com/202604132329/8f83a240ebd14bdb3cf3e7849fc4b0ce/notes_uhdr/1040g3qo31tlcds31mq705n40vssk29q8rar4lko!nc_n_webp_prv_1" alt="桂山岛" loading="eager" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B6B,#FF8E53)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://sns-webpic-qc.xhscdn.com/202604132329/3ec29113de539259880835a66de460b8/1040g2sg31nmio9ek6m8045fhcpjvvl5dpj5q2q0!nc_n_webp_prv_1" alt="情侣路" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4ECDC4,#45B7AA)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://sns-webpic-qc.xhscdn.com/202604132331/6a13a6a042b8226e5a5639dd419a6872/notes_pre_post/1040g3k831q429i947o004bohir7knqfobp9nk18!nc_n_webp_prv_1" alt="澳门大三巴" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFD93D,#FFC107)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://sns-webpic-qc.xhscdn.com/202604132329/9667f517b9d36f15c70065af31cbe5d1/notes_pre_post/1040g3k831qcsm5jvga5g5pb0vmp209jt9gkemmo!nc_n_webp_prv_1" alt="长隆海洋王国" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#6C5CE7,#a29bfe)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://sns-webpic-qc.xhscdn.com/202604132331/dcb3120868f21dd032ffb4966ebd428d/notes_pre_post/1040g3k831p4s7i7o2o9g4a72khup045l646rhc8!nc_n_webp_prv_1" alt="威尼斯人" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fd79a8,#e84393)'">
+    </div>
+    <div class="hero-slide">
+      <img src="https://sns-webpic-qc.xhscdn.com/202604132329/7900249847510b3538d885af283dab6c/1040g2sg31t1nu6e5lsc0419rg68tiq43nlqcdmg!nc_n_webp_prv_1" alt="桂山岛海景" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#00b894,#00cec9)'">
+    </div>
+  </div>
+
+  <div class="hero-overlay">
+    <span class="hero-badge">🎉 2026年五一黄金周 | 3天2晚深度攻略</span>
+    <h1 class="hero-title">
+      五一珠海·澳门·<span class="highlight">桂山岛</span><br>3日深度游
+    </h1>
+    <p class="hero-subtitle">2026年5月2日 — 4日 &nbsp;|&nbsp; 出发地：深圳宝安中心</p>
+    <div class="hero-cta">
+      <a href="#itinerary" class="btn btn-primary">📅 查看完整行程</a>
+      <a href="#budget" class="btn btn-outline">💰 费用测算</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" onclick="goToSlide(0)"></button>
+    <button class="hero-dot" onclick="goToSlide(1)"></button>
+    <button class="hero-dot" onclick="goToSlide(2)"></button>
+    <button class="hero-dot" onclick="goToSlide(3)"></button>
+    <button class="hero-dot" onclick="goToSlide(4)"></button>
+    <button class="hero-dot" onclick="goToSlide(5)"></button>
+  </div>
+</section>
+
+
+<!-- 搭饭计划 BANNER -->
+<section id="dafan" style="background:linear-gradient(135deg,#FF6B6B 0%,#FF8E53 50%,#FFD93D 100%);padding:48px 0;">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <div style="flex:1;min-width:280px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.2);border-radius:100px;padding:6px 16px;margin-bottom:16px;">
+          <span style="font-size:1rem;">🤝</span>
+          <span style="color:#fff;font-size:0.85rem;font-weight:700;letter-spacing:1px;">CARPOOL & JOIN PLAN</span>
+        </div>
+        <div class="sillyfan-logo" style="margin-bottom:16px;"><div class="sillyfan-box"><span class="sillyfan-text">傻饭计划</span></div><span class="sillyfan-en">SILLYFAN PROJECT</span></div>
+        <h2 style="font-size:clamp(1.2rem,3vw,1.8rem);font-weight:700;color:rgba(255,255,255,0.95);margin-bottom:12px;text-shadow:0 2px 10px rgba(0,0,0,0.2);">一起出发！2026 五一三天两夜</h2>
+        <p style="color:rgba(255,255,255,0.92);font-size:1.05rem;margin-bottom:20px;line-height:1.7;">
+          2026年五一黄金周 <strong style="color:#FFD93D;">5月2日（六）—— 5月4日（一）</strong>，三天两夜<br>
+          深圳宝安中心出发，游珠海·桂山岛·澳门，人多更热闹！<br>
+          <span style="font-size:0.9rem;opacity:0.85;">🚌 宝安中心乘淘出行跨城巴士，¥29.9直达拱北口岸</span>
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <div style="background:rgba(255,255,255,0.18);border-radius:12px;padding:12px 20px;text-align:center;">
+            <div style="color:#FFD93D;font-size:1.5rem;font-weight:900;">3</div>
+            <div style="color:rgba(255,255,255,0.9);font-size:0.8rem;">天2夜</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.18);border-radius:12px;padding:12px 20px;text-align:center;">
+            <div style="color:#FFD93D;font-size:1.5rem;font-weight:900;">3</div>
+            <div style="color:rgba(255,255,255,0.9);font-size:0.8rem;">目的地</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.18);border-radius:12px;padding:12px 20px;text-align:center;">
+            <div style="color:#FFD93D;font-size:1.5rem;font-weight:900;">≤¥1200</div>
+            <div style="color:rgba(255,255,255,0.9);font-size:0.8rem;">人均预算</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:0 0 auto;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border-radius:20px;padding:24px;min-width:240px;border:1px solid rgba(255,255,255,0.3);">
+        <div style="color:#fff;font-weight:800;font-size:1rem;margin-bottom:16px;">📅 行程快览</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:#FFD93D;color:#333;font-weight:800;font-size:0.75rem;padding:3px 10px;border-radius:100px;">Day1</span>
+            <span style="color:rgba(255,255,255,0.92);font-size:0.9rem;">宝安出发 → 桂山岛一日游</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:#4ECDC4;color:#fff;font-weight:800;font-size:0.75rem;padding:3px 10px;border-radius:100px;">Day2</span>
+            <span style="color:rgba(255,255,255,0.92);font-size:0.9rem;">珠海情侣路 · 日月贝漫游</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:rgba(255,255,255,0.3);color:#fff;font-weight:800;font-size:0.75rem;padding:3px 10px;border-radius:100px;">Day3</span>
+            <span style="color:rgba(255,255,255,0.92);font-size:0.9rem;">澳门全天 → 巴士回宝安</span>
+          </div>
+        </div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.2);">
+          <div style="color:rgba(255,255,255,0.8);font-size:0.8rem;margin-bottom:8px;">📌 集合信息</div>
+          <div style="color:#FFD93D;font-size:0.88rem;font-weight:700;">5月2日 08:45</div>
+          <div style="color:rgba(255,255,255,0.9);font-size:0.85rem;">深圳宝安中心淘出行候车点</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.78rem;margin-top:4px;">（提前15分钟到场，09:00发车）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIP OVERVIEW -->
+<section id="overview" class="bg-gray">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">TRIP OVERVIEW</span>
+      <h2 class="section-title">🗺️ 3日行程一览</h2>
+      <p class="section-subtitle">深圳出发，三地精华打卡，含桂山岛玻璃海、珠海情侣路、澳门历史老城</p>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-card fade-in">
+        <div class="day-number">D1</div>
+        <div class="day-label">MAY 2 · SATURDAY</div>
+        <div class="day-title">蛇口出海 · 桂山岛</div>
+        <ul class="day-stops">
+          <li>🚇 地铁→蛇口邮轮母港（08:00）</li>
+          <li>🛥️ 09:40渡轮→桂山岛 ✅已购票</li>
+          <li>🏖️ 玻璃海 + 奶油灯塔 + 打卡</li>
+          <li>⛴️ 17:30回程→珠海香洲港 ✅已购票</li>
+          <li>🏨 入住拱北附近酒店 + 晚餐</li>
+        </ul>
+        <span class="day-tag">🏝️ 岛屿探险</span>
+      </div>
+      <div class="overview-card fade-in">
+        <div class="day-number">D2</div>
+        <div class="day-label">MAY 3 · SUNDAY</div>
+        <div class="day-title">珠海城市漫游</div>
+        <ul class="day-stops">
+          <li>📮 爱情邮局 + 珠海渔女</li>
+          <li>🍰 城市阳台暴富漏奶华</li>
+          <li>🎭 日月贝大剧院打卡</li>
+          <li>🚴 骑行情侣路看落日</li>
+          <li>🦆 荣记深井烧鹅晚餐</li>
+        </ul>
+        <span class="day-tag">🌅 城市风光</span>
+      </div>
+      <div class="overview-card fade-in">
+        <div class="day-number">D3</div>
+        <div class="day-label">MAY 4 · MONDAY</div>
+        <div class="day-title">澳门一日游</div>
+        <ul class="day-stops">
+          <li>🛂 拱北口岸过关</li>
+          <li>🏛️ 大三巴 + 恋爱巷</li>
+          <li>🧋 美高梅免费奶茶</li>
+          <li>🎰 威尼斯人 + 伦敦人</li>
+          <li>🥧 安德鲁蛋挞 + 猪扒包</li>
+          <li>🚌 拱北口岸公交站20:30→宝安(约22:00)</li>
+        </ul>
+        <span class="day-tag">🇲🇴 葡风小城</span>
+      </div>
+    </div>
+
+    <!-- Route Order Analysis -->
+    <div style="margin-top:40px;background:linear-gradient(135deg,rgba(78,205,196,0.06),rgba(255,107,107,0.04));border:1.5px solid rgba(78,205,196,0.25);border-radius:20px;padding:28px 32px;" class="fade-in">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+        <span style="font-size:1.5rem;">🔍</span>
+        <div>
+          <div style="font-weight:900;font-size:1.1rem;color:#2d3436;">行程顺序评估 · 为什么先桂山岛再澳门？</div>
+          <div style="font-size:0.85rem;color:#636e72;margin-top:2px;">综合交通、渡轮时刻、返程衔接三大因素分析</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div style="background:#fff;border-radius:14px;padding:18px;border:2px solid #4ECDC4;position:relative;">
+          <div style="position:absolute;top:-10px;left:16px;background:#4ECDC4;color:#fff;font-size:0.7rem;font-weight:800;padding:2px 12px;border-radius:100px;">✅ 推荐方案</div>
+          <div style="font-weight:800;color:#2d3436;margin-bottom:10px;margin-top:4px;">方案A：桂山岛→珠海→澳门</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:0.85rem;color:#333;display:flex;gap:6px;"><span style="color:#00b894;">✓</span>Day1早上09:40蛇口直达桂山岛，全天畅玩，行程最充裕</li>
+            <li style="font-size:0.85rem;color:#333;display:flex;gap:6px;"><span style="color:#00b894;">✓</span>Day1傍晚17:30桂山岛→香洲港直达，无需回深圳</li>
+            <li style="font-size:0.85rem;color:#333;display:flex;gap:6px;"><span style="color:#00b894;">✓</span>Day3澳门约18:00出关→拱北口岸20:30大巴无缝衔接</li>
+            <li style="font-size:0.85rem;color:#333;display:flex;gap:6px;"><span style="color:#00b894;">✓</span>Day2珠海市区作中间缓冲，不赶时间</li>
+          </ul>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:18px;border:1.5px solid #e0e0e0;position:relative;opacity:0.75;">
+          <div style="position:absolute;top:-10px;left:16px;background:#b2bec3;color:#fff;font-size:0.7rem;font-weight:800;padding:2px 12px;border-radius:100px;">⚠️ 不推荐</div>
+          <div style="font-weight:800;color:#636e72;margin-bottom:10px;margin-top:4px;">方案B：澳门→珠海→桂山岛</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:0.85rem;color:#636e72;display:flex;gap:6px;"><span style="color:#e17055;">✗</span>Day3岛上游玩结束需赶回拱北乘返程巴士，紧张</li>
+            <li style="font-size:0.85rem;color:#636e72;display:flex;gap:6px;"><span style="color:#e17055;">✗</span>末班渡船约17:30，回到拱北约19:00，赶巴士风险大</li>
+            <li style="font-size:0.85rem;color:#636e72;display:flex;gap:6px;"><span style="color:#e17055;">✗</span>Day3不能充分游览澳门，错过夜景精华</li>
+            <li style="font-size:0.85rem;color:#636e72;display:flex;gap:6px;"><span style="color:#e17055;">✗</span>Day1过关去澳门时差不多也11点，打乱节奏</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ITINERARY TABS -->
+<!-- 天气交通模块 -->
+<section id="weather-transport" style="padding:64px 0;background:linear-gradient(160deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
+  <div class="container">
+    <div class="section-header fade-in" style="margin-bottom:40px;">
+      <span class="section-tag" style="background:linear-gradient(135deg,#4ECDC4,#45B7AA);color:#fff;padding:4px 16px;border-radius:100px;font-size:0.78rem;font-weight:700;">🌤️ WEATHER & TRANSPORT</span>
+      <h2 class="section-title" style="margin-top:12px;color:#fff;">天气 & 交通指南</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.7);">5月珠海澳门气候宜人，出行前必看</p>
+    </div>
+
+    <!-- 天气卡片 -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px;">
+      <!-- Day 1 天气 -->
+      <div class="fade-in" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:20px;padding:22px 20px;border:2px solid rgba(78,205,196,0.4);text-align:center;">
+        <div style="color:#4ECDC4;font-size:0.72rem;font-weight:800;letter-spacing:2px;margin-bottom:8px;">5月2日 · 周六</div>
+        <div style="font-size:2.4rem;margin-bottom:8px;">⛅</div>
+        <div style="color:#fff;font-size:1.6rem;font-weight:900;margin-bottom:4px;">26~30°C</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:700;margin-bottom:6px;">多云间晴</div>
+        <div style="color:rgba(255,255,255,0.55);font-size:0.78rem;line-height:1.6;">湿度 78% · 南风 3级<br>🏝️ 桂山岛出海较适宜</div>
+      </div>
+      <!-- Day 2 天气 -->
+      <div class="fade-in" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:20px;padding:22px 20px;border:2px solid rgba(255,217,61,0.4);text-align:center;">
+        <div style="color:#FFD93D;font-size:0.72rem;font-weight:800;letter-spacing:2px;margin-bottom:8px;">5月3日 · 周日</div>
+        <div style="font-size:2.4rem;margin-bottom:8px;">☀️</div>
+        <div style="color:#fff;font-size:1.6rem;font-weight:900;margin-bottom:4px;">27~31°C</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:700;margin-bottom:6px;">晴转多云</div>
+        <div style="color:rgba(255,255,255,0.55);font-size:0.78rem;line-height:1.6;">湿度 72% · 东南风 2级<br>🌅 情侣路骑行绝佳时机</div>
+      </div>
+      <!-- Day 3 天气 -->
+      <div class="fade-in" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:20px;padding:22px 20px;border:2px solid rgba(255,107,107,0.4);text-align:center;">
+        <div style="color:#FF6B6B;font-size:0.72rem;font-weight:800;letter-spacing:2px;margin-bottom:8px;">5月4日 · 周一</div>
+        <div style="font-size:2.4rem;margin-bottom:8px;">🌦️</div>
+        <div style="color:#fff;font-size:1.6rem;font-weight:900;margin-bottom:4px;">24~28°C</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:700;margin-bottom:6px;">阵雨转多云</div>
+        <div style="color:rgba(255,255,255,0.55);font-size:0.78rem;line-height:1.6;">湿度 85% · 偶有雷阵雨<br>☂️ 带折叠雨伞，澳门室内活动多</div>
+      </div>
+    </div>
+    <!-- 穿衣提示条 -->
+    <div class="fade-in" style="background:rgba(255,255,255,0.07);border-radius:14px;padding:16px 20px;margin-bottom:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;border:1px solid rgba(255,255,255,0.1);">
+      <span style="color:rgba(255,255,255,0.9);font-size:0.85rem;display:flex;align-items:center;gap:8px;"><span style="font-size:1.2rem;">👕</span> <strong>穿衣：</strong>T恤+防晒衣为主，5月4日备折叠雨伞</span>
+      <span style="color:rgba(255,255,255,0.9);font-size:0.85rem;display:flex;align-items:center;gap:8px;"><span style="font-size:1.2rem;">☀️</span> <strong>防晒：</strong>SPF50+ 防晒霜必带，海岛紫外线强</span>
+      <span style="color:rgba(255,255,255,0.9);font-size:0.85rem;display:flex;align-items:center;gap:8px;"><span style="font-size:1.2rem;">🌊</span> <strong>海温：</strong>约24°C，适合戏水，大风可能停航</span>
+      <span style="color:rgba(255,107,107,0.9);font-size:0.85rem;display:flex;align-items:center;gap:8px;font-weight:700;"><span style="font-size:1.2rem;">⚠️</span> 以上为历史气候参考，出发前务必查看实时天气！</span>
+    </div>
+
+    <!-- 交通路线图 -->
+    <div class="fade-in" style="background:rgba(255,255,255,0.06);border-radius:24px;padding:32px;border:1px solid rgba(255,255,255,0.1);">
+      <div style="color:#FFD93D;font-size:0.78rem;font-weight:700;letter-spacing:2px;margin-bottom:20px;text-align:center;">🗺️ 全程交通路线一览</div>
+      <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+        <div style="text-align:center;padding:14px 18px;background:rgba(255,255,255,0.1);border-radius:14px;min-width:100px;">
+          <div style="font-size:1.4rem;">🚇</div>
+          <div style="color:#fff;font-size:0.8rem;font-weight:700;margin-top:4px;">坪洲站</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">11号线出发</div>
+        </div>
+        <div style="color:#4ECDC4;font-size:0.75rem;font-weight:700;text-align:center;">
+          <div>→ 地铁11号线直达</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">约20分钟 ¥4</div>
+        </div>
+        <div style="text-align:center;padding:14px 18px;background:rgba(255,255,255,0.1);border-radius:14px;min-width:100px;">
+          <div style="font-size:1.4rem;">⚓</div>
+          <div style="color:#fff;font-size:0.8rem;font-weight:700;margin-top:4px;">蛇口邮轮港</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">赤湾站步行10min</div>
+        </div>
+        <div style="color:#FFD93D;font-size:0.75rem;font-weight:700;text-align:center;">
+          <div>→ 渡轮 ¥120-130</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">50分钟</div>
+        </div>
+        <div style="text-align:center;padding:14px 18px;background:rgba(255,107,0,0.25);border-radius:14px;border:2px solid #FF6B00;min-width:100px;">
+          <div style="font-size:1.4rem;">🏝️</div>
+          <div style="color:#FF6B00;font-size:0.8rem;font-weight:700;margin-top:4px;">桂山岛</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Day 1</div>
+        </div>
+        <div style="color:#74b9ff;font-size:0.75rem;font-weight:700;text-align:center;">
+          <div>→ 渡轮 ¥100</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">50分钟</div>
+        </div>
+        <div style="text-align:center;padding:14px 18px;background:rgba(255,255,255,0.1);border-radius:14px;min-width:100px;">
+          <div style="font-size:1.4rem;">🏙️</div>
+          <div style="color:#fff;font-size:0.8rem;font-weight:700;margin-top:4px;">珠海香洲港</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Day 1-2</div>
+        </div>
+        <div style="color:#a29bfe;font-size:0.75rem;font-weight:700;text-align:center;">
+          <div>→ 步行过关</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Day 3</div>
+        </div>
+        <div style="text-align:center;padding:14px 18px;background:rgba(255,255,255,0.1);border-radius:14px;min-width:100px;">
+          <div style="font-size:1.4rem;">🎰</div>
+          <div style="color:#fff;font-size:0.8rem;font-weight:700;margin-top:4px;">澳门</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">Day 3</div>
+        </div>
+        <div style="color:#FF6B6B;font-size:0.75rem;font-weight:700;text-align:center;">
+          <div>→ 淘出行巴士</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">¥29.9 约2h</div>
+        </div>
+        <div style="text-align:center;padding:14px 18px;background:rgba(255,255,255,0.1);border-radius:14px;min-width:100px;">
+          <div style="font-size:1.4rem;">🏠</div>
+          <div style="color:#fff;font-size:0.8rem;font-weight:700;margin-top:4px;">宝安中心</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;">约22:00到家</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px 16px;border-left:3px solid #4ECDC4;">
+          <div style="color:#4ECDC4;font-weight:700;font-size:0.85rem;margin-bottom:6px;">🚇 去程（Day 1）</div>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.82rem;line-height:1.8;">宝安中心 → 地铁 → 蛇口邮轮母港 → 渡轮50min → 桂山岛 → 渡轮50min → 珠海香洲港</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px 16px;border-left:3px solid #FF6B6B;">
+          <div style="color:#FF6B6B;font-weight:700;font-size:0.85rem;margin-bottom:6px;">🚌 返程（Day 3）</div>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.82rem;line-height:1.8;">澳门 → 步行拱北口岸 → 淘出行跨城巴士¥29.9 → 宝安中心（约22:00到达）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 绝美景点图鉴 -->
+<section id="landmarks" style="padding:80px 0;background:#fff;">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag" style="background:linear-gradient(135deg,#FF6B6B,#FFD93D);color:#fff;padding:4px 16px;border-radius:100px;font-size:0.78rem;font-weight:700;">📸 LANDMARK GUIDE</span>
+      <h2 class="section-title" style="margin-top:12px;">📷 绝美地标 · 图鉴</h2>
+      <p class="section-subtitle">数据源自小红书真实游记，拒绝照骗，跟着这组机位拍就对了</p>
+    </div>
+
+    <!-- Full-width auto-play landmark carousel -->
+    <div style="position:relative;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+      <div id="lmTrack" style="display:flex;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);">
+
+        <!-- Card 1: 桂山岛 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132329/8f83a240ebd14bdb3cf3e7849fc4b0ce/notes_uhdr/1040g3qo31tlcds31mq705n40vssk29q8rar4lko!nc_n_webp_prv_1','桂山岛风情','果冻海与渔村烟火气的完美结合')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/8f83a240ebd14bdb3cf3e7849fc4b0ce/notes_uhdr/1040g3qo31tlcds31mq705n40vssk29q8rar4lko!nc_n_webp_prv_1" alt="桂山岛" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#4ECDC4,#45B7AA)'">
+            <div class="lm-overlay"><span class="lm-icon">🏝️</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">桂山岛风情</div>
+            <div class="lm-desc">果冻海与渔村烟火气的完美结合</div>
+          </div>
+        </div>
+
+        <!-- Card 2: 一号堤灯塔 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132329/7900249847510b3538d885af283dab6c/1040g2sg31t1nu6e5lsc0419rg68tiq43nlqcdmg!nc_n_webp_prv_1','桂山岛·奶油灯塔','平替小镰仓，橘子海出片率100%')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/7900249847510b3538d885af283dab6c/1040g2sg31t1nu6e5lsc0419rg68tiq43nlqcdmg!nc_n_webp_prv_1" alt="桂山岛灯塔" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#f39c12,#e74c3c)'">
+            <div class="lm-overlay"><span class="lm-icon">🗼</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">一号堤灯塔</div>
+            <div class="lm-desc">平替小镰仓，橘子海出片率100%</div>
+          </div>
+        </div>
+
+        <!-- Card 3: 日月贝 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132329/3ec29113de539259880835a66de460b8/1040g2sg31nmio9ek6m8045fhcpjvvl5dpj5q2q0!nc_n_webp_prv_1','日月贝大剧院','珠海地标建筑，退潮倒影绝美')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/3ec29113de539259880835a66de460b8/1040g2sg31nmio9ek6m8045fhcpjvvl5dpj5q2q0!nc_n_webp_prv_1" alt="日月贝" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0984e3,#74b9ff)'">
+            <div class="lm-overlay"><span class="lm-icon">🎭</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">日月贝大剧院</div>
+            <div class="lm-desc">珠海地标，退潮时倒影绝美</div>
+          </div>
+        </div>
+
+        <!-- Card 4: 情侣路落日 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132329/c29919b5954c703429cf575661e0a280/notes_uhdr/1040g3qo31qr7kc2f7g7045fhcpjvvl5dbe6me1g!nc_n_webp_prv_1','情侣路落日','全国最浪漫海岸线之一')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/c29919b5954c703429cf575661e0a280/notes_uhdr/1040g3qo31qr7kc2f7g7045fhcpjvvl5dbe6me1g!nc_n_webp_prv_1" alt="情侣路" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#e17055,#fdcb6e)'">
+            <div class="lm-overlay"><span class="lm-icon">🌅</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">情侣路落日</div>
+            <div class="lm-desc">全国最浪漫海岸线，傍晚必来</div>
+          </div>
+        </div>
+
+        <!-- Card 5: 大三巴牌坊 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132331/6a13a6a042b8226e5a5639dd419a6872/notes_pre_post/1040g3k831q429i947o004bohir7knqfobp9nk18!nc_n_webp_prv_1','大三巴牌坊','澳门标志，周边手信免费试吃')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/6a13a6a042b8226e5a5639dd419a6872/notes_pre_post/1040g3k831q429i947o004bohir7knqfobp9nk18!nc_n_webp_prv_1" alt="大三巴" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#636e72,#b2bec3)'">
+            <div class="lm-overlay"><span class="lm-icon">🏛️</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">大三巴牌坊</div>
+            <div class="lm-desc">澳门标志，周边手信免费试吃</div>
+          </div>
+        </div>
+
+        <!-- Card 6: 伦敦人夜景 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132331/c35c9866a801be8e0143bdbbd4b8b4e8/notes_pre_post/1040g3k031o8kk4n2l8504aj04cph9nl5160u718!nc_n_webp_prv_1','伦敦人夜景','金碧辉煌，一秒穿越英伦街头')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/c35c9866a801be8e0143bdbbd4b8b4e8/notes_pre_post/1040g3k031o8kk4n2l8504aj04cph9nl5160u718!nc_n_webp_prv_1" alt="伦敦人" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#6c5ce7,#a29bfe)'">
+            <div class="lm-overlay"><span class="lm-icon">🏰</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">伦敦人夜景</div>
+            <div class="lm-desc">金碧辉煌，一秒穿越英伦街头</div>
+          </div>
+        </div>
+
+        <!-- Card 7: 威尼斯人 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132331/51a855a7f8d90cfb6a921dd679be6f56/1040g2sg31obb7g5l6m2g5pr6ij2m2tl4pm4v7j0!nc_n_webp_prv_1','威尼斯人','人造天空与运河，绝美欧风大片')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/51a855a7f8d90cfb6a921dd679be6f56/1040g2sg31obb7g5l6m2g5pr6ij2m2tl4pm4v7j0!nc_n_webp_prv_1" alt="威尼斯人" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0984e3,#00cec9)'">
+            <div class="lm-overlay"><span class="lm-icon">🚤</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">威尼斯人</div>
+            <div class="lm-desc">人造天空与运河，欧风大片</div>
+          </div>
+        </div>
+
+        <!-- Card 8: 澳门夜景 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132332/1db443732fc26c3e93db666a076da5f6/notes_pre_post/1040g3k031uj02sf92o604a4sji8jh4aae70h7e8!nc_n_webp_prv_1','澳门夜景全景','灯火璀璨的不夜城，绝美城市轮廓')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132332/1db443732fc26c3e93db666a076da5f6/notes_pre_post/1040g3k031uj02sf92o604a4sji8jh4aae70h7e8!nc_n_webp_prv_1" alt="澳门夜景" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#2d3436,#636e72)'">
+            <div class="lm-overlay"><span class="lm-icon">🌃</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">澳门夜景全景</div>
+            <div class="lm-desc">灯火璀璨的不夜城，城市天际线</div>
+          </div>
+        </div>
+
+        <!-- Card 9: 长隆海洋王国 -->
+        <div class="landmark-card" onclick="openLightbox('https://sns-webpic-qc.xhscdn.com/202604132329/9667f517b9d36f15c70065af31cbe5d1/notes_pre_post/1040g3k831qcsm5jvga5g5pb0vmp209jt9gkemmo!nc_n_webp_prv_1','长隆海洋王国','全球最大海洋主题乐园之一')">
+          <div class="lm-img-wrap">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/9667f517b9d36f15c70065af31cbe5d1/notes_pre_post/1040g3k831qcsm5jvga5g5pb0vmp209jt9gkemmo!nc_n_webp_prv_1" alt="长隆" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#00b894,#55efc4)'">
+            <div class="lm-overlay"><span class="lm-icon">🐬</span></div>
+          </div>
+          <div class="lm-info">
+            <div class="lm-name">长隆海洋王国</div>
+            <div class="lm-desc">鲸鲨馆·海豚表演·烟花秀</div>
+          </div>
+        </div>
+
+      </div><!-- end lmTrack -->
+      <!-- 左右按钮 -->
+      <button onclick="lmMove(-1)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.9);border:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;z-index:3;transition:all 0.2s;" onmouseover="this.style.background='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.9)'">❮</button>
+      <button onclick="lmMove(1)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.9);border:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;z-index:3;transition:all 0.2s;" onmouseover="this.style.background='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.9)'">❯</button>
+      <!-- 进度条 -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.2);">
+        <div id="lmProgress" style="height:100%;background:linear-gradient(90deg,#FF6B6B,#FFD93D);width:0%;"></div>
+      </div>
+    </div>
+    <!-- 缩略图导航 -->
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:20px;flex-wrap:wrap;" id="lmThumbs">
+      <button class="lm-thumb active" onclick="lmGo(0)" style="width:10px;height:10px;border-radius:50%;border:none;background:#FF6B6B;cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(1)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(2)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(3)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(4)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(5)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(6)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(7)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+      <button class="lm-thumb" onclick="lmGo(8)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.2);cursor:pointer;transition:all 0.3s;padding:0;"></button>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox for landmarks -->
+<div id="lbOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:20px;" onclick="this.style.display='none'">
+  <img id="lbImg" src="" alt="" style="max-width:90vw;max-height:75vh;border-radius:12px;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,0.5);">
+  <div id="lbTitle" style="color:#fff;font-size:1.2rem;font-weight:700;margin-top:16px;"></div>
+  <div id="lbDesc" style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-top:6px;"></div>
+  <button onclick="document.getElementById('lbOverlay').style.display='none'" style="margin-top:20px;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:10px 24px;border-radius:100px;cursor:pointer;font-size:0.9rem;">关闭 ✕</button>
+</div>
+
+<section id="itinerary">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">DAILY ITINERARY</span>
+      <h2 class="section-title">📅 每日详细行程</h2>
+      <p class="section-subtitle">精确到小时的行程规划，含交通、餐饮、打卡全攻略</p>
+    </div>
+
+    <div class="tabs-nav fade-in">
+      <button class="tab-btn active" onclick="switchTab('day1', this)">🏝️ Day 1 桂山岛</button>
+      <button class="tab-btn" onclick="switchTab('day2', this)">🌅 Day 2 珠海漫游</button>
+      <button class="tab-btn" onclick="switchTab('day3', this)">🇲🇴 Day 3 澳门</button>
+    </div>
+
+    <!-- DAY 1 -->
+    <div id="tab-day1" class="tab-content active">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+        <div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot">🚇</div>
+              <span class="timeline-time">08:00</span>
+              <div class="timeline-title">宝安中心出发 → 蛇口邮轮母港</div>
+              <div class="timeline-desc">从<strong>坪洲站</strong>出发，乘地铁 <strong>11号线</strong>（方向：碧头/机场北），约 <strong>20分钟、4站</strong>直达<strong>赤湾站</strong>，步行约10分钟至招商蛇口邮轮母港码头。提前30分钟到码头凭「预留姓名+手机+身份证」取票。</div>
+              <div class="timeline-tips">🚇 <strong>坪洲→赤湾</strong>：11号线直达，全程约20分钟，票价约¥4 | 途经：坪洲→固戍→后瑞→灵芝→赤湾 | 🏢 码头：深圳市南山区海运路1号蛇口邮轮中心 | ⏰ 建议08:00坪洲出发，08:30前到码头</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🛥️</div>
+              <span class="timeline-time">09:40</span>
+              <div class="timeline-title">✅ 已购票！蛇口 → 桂山岛出发</div>
+              <div class="timeline-desc">乘坐 <strong>09:40班次</strong> 深圳蛇口→桂山岛高速渡轮，全程约 <strong>50分钟</strong>。普通舱，票价约 <strong>¥117.9/人</strong>（已购）。坐上船吹海风，约10:30抵达桂山岛！</div>
+              <div class="timeline-tips">🎫 购票平台：美团 | 💡 非当日可售票，需凭「联系人手机+有效证件+预留姓名」取票使用 | ⚓ 抵达约10:30</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🏝️</div>
+              <span class="timeline-time">10:30</span>
+              <div class="timeline-title">抵达桂山岛！上岛探索</div>
+              <div class="timeline-desc">全天畅玩桂山岛核心景点：<strong>①玻璃海</strong>（果冻蓝退潮最美）→ <strong>②奶油灯塔</strong>（平替小镰仓，拍照神位）→ <strong>③通往大海的路</strong>（live图绝景）→ <strong>④观景台</strong>俯瞰全岛</div>
+              <div class="timeline-tips">📸 推荐多角度 live 图，自动生成岛屿动态大片！| 🌊 上午10-12点退潮期玻璃海最清澈 | 🏝️ 岛上出行靠步行，全程打卡约需4-5小时</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🍜</div>
+              <span class="timeline-time">12:30</span>
+              <div class="timeline-title">岛上午餐：渔家小馆</div>
+              <div class="timeline-desc">就地取材的渔家菜：清蒸石斑鱼、白灼濑尿虾、炒沙虫、烤生蚝，人均约¥80-120。新鲜程度远超大陆！</div>
+              <div class="timeline-tips">💡 旺季建议上岛后立刻预约，避免等位 | 岛上餐馆有限，不预约可能没座</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🌅</div>
+              <span class="timeline-time">14:00</span>
+              <div class="timeline-title">下午继续探岛 + 备行李准备离岛</div>
+              <div class="timeline-desc">下午可继续探索剩余打卡点：<strong>祈福树</strong>（许愿红绳）、<strong>一号堤</strong>（绝佳日落点）、<strong>小渔村</strong>（感受烟火气）。16:45前整理行李到码头候船。</div>
+              <div class="timeline-tips">🌇 一号堤是绝佳日落打卡点，傍晚光线极美 | ⏰ 务必16:45前到达码头，不要错过17:30班次！</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">⛴️</div>
+              <span class="timeline-time">17:30</span>
+              <div class="timeline-title">✅ 已购票！桂山岛 → 香洲港出发</div>
+              <div class="timeline-desc">乘坐 <strong>17:30回程班次</strong> 桂山岛→珠海香洲港，全程约 <strong>50分钟</strong>，票价约 <strong>¥118/人</strong>（已购）。看着夕阳在船上回到珠海，约18:20抵达！</div>
+              <div class="timeline-tips">🎫 已购，凭出团确认联系方式出行 | ⚠️ 商家当天09:00前会与您确认出团信息 | 🚢 到达珠海香洲港后打车/公交前往酒店</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🏨</div>
+              <span class="timeline-time">19:00</span>
+              <div class="timeline-title">抵达珠海市区 + 办理入住</div>
+              <div class="timeline-desc">香洲港下船，打车前往<strong>拱北口岸附近酒店</strong>（提前预订），办理入住，放下行李，休整片刻。选拱北附近住宿方便第三天步行过关去澳门。</div>
+              <div class="timeline-tips">🚕 香洲港→拱北区打车约¥15-20，约15分钟 | 🏨 推荐：珠海万豪/汉庭拱北口岸店/桔子酒店，提前3周以上预订</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🦐</div>
+              <span class="timeline-time">20:00</span>
+              <div class="timeline-title">拱北晚餐：叁玖大排档 / 夜宵</div>
+              <div class="timeline-desc">今晚轻松吃，可选叁玖大排档（海鲜，提前排队或预约），或在拱北商圈附近随意逛吃，感受粤港澳大湾区烟火气。</div>
+              <div class="timeline-tips">📍 叁玖：香洲区拱北围基路28号3栋西海名苑一层21号 | 💡 今晚早点休息，明天白天行程较多</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- Guishan mini carousel -->
+          <div class="attraction-card">
+            <div class="mini-carousel" id="mc-guishan">
+              <div class="mini-carousel-track" id="mct-guishan">
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/8f83a240ebd14bdb3cf3e7849fc4b0ce/notes_uhdr/1040g3qo31tlcds31mq705n40vssk29q8rar4lko!nc_n_webp_prv_1" alt="桂山岛" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4ECDC4,#45B7AA)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/7900249847510b3538d885af283dab6c/1040g2sg31t1nu6e5lsc0419rg68tiq43nlqcdmg!nc_n_webp_prv_1" alt="桂山岛海景" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#00b894,#00cec9)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/e759944cfaf93399c15d70408b644fa0/1040g00831rbt3tbh0m405npu0or097fmp5pamf0!nc_n_webp_prv_1" alt="桂山岛灯塔" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#0984e3,#74b9ff)'">
+                </div>
+              </div>
+              <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('guishan')">&#8249;</button>
+              <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('guishan')">&#8250;</button>
+              <div class="mini-carousel-dots" id="mcd-guishan">
+                <button class="mini-dot active" onclick="miniGo('guishan',0)"></button>
+                <button class="mini-dot" onclick="miniGo('guishan',1)"></button>
+                <button class="mini-dot" onclick="miniGo('guishan',2)"></button>
+              </div>
+            </div>
+            <div class="attraction-info">
+              <span class="attraction-tag">🏝️ Day 1 主景点</span>
+              <div class="attraction-name">桂山岛 — 珠海隐藏宝藏小岛</div>
+              <div class="attraction-desc">位于珠海万山群岛中，以清澈的"玻璃海"著称，退潮时海水清澈见底，奶油色灯塔是XHS爆款打卡地。五一季水温适宜，适合踏浪、拍照、吹风发呆。</div>
+              <div class="attraction-meta">
+                <div class="meta-item">📍 <strong>蛇口邮轮母港→桂山岛渡轮约50分钟</strong></div>
+                <div class="meta-item">🎫 <strong>蛇口→桂山岛约¥117.9/人（已购）</strong></div>
+                <div class="meta-item">⏰ <strong>全天游玩，09:40上岛17:30返程</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; padding:20px; background:linear-gradient(135deg,rgba(78,205,196,0.08),rgba(255,107,107,0.05)); border-radius:16px; border:1px solid rgba(78,205,196,0.2);">
+            <div style="font-weight:800;color:#2d3436;margin-bottom:12px;">🧳 Day 1 打包建议</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:0.88rem;color:#636e72;display:flex;align-items:center;gap:8px;"><span style="font-size:1rem;">☀️</span>防晒霜 SPF50+，海边紫外线强烈</li>
+              <li style="font-size:0.88rem;color:#636e72;display:flex;align-items:center;gap:8px;"><span style="font-size:1rem;">👟</span>防滑运动鞋，岛上有礁石路段</li>
+              <li style="font-size:0.88rem;color:#636e72;display:flex;align-items:center;gap:8px;"><span style="font-size:1rem;">📱</span>充电宝 + 手机防水袋，海边拍照必备</li>
+              <li style="font-size:0.88rem;color:#636e72;display:flex;align-items:center;gap:8px;"><span style="font-size:1rem;">💧</span>饮用水，岛上购买较贵</li>
+              <li style="font-size:0.88rem;color:#636e72;display:flex;align-items:center;gap:8px;"><span style="font-size:1rem;">🎟️</span>提前购好桂山岛渡轮票（七天前）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div id="tab-day2" class="tab-content">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+        <div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot">💌</div>
+              <span class="timeline-time">09:00</span>
+              <div class="timeline-title">爱情邮局 + 灯塔打卡</div>
+              <div class="timeline-desc">珠海最浪漫打卡地之一，可投寄明信片给未来的自己或爱人。与珠海渔女雕像遥遥相望，晨光摄影绝佳时段。</div>
+              <div class="timeline-tips">📮 在爱情邮局寄出一张明信片，¥5起，特殊邮戳纪念意义满满</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🐟</div>
+              <span class="timeline-time">10:00</span>
+              <div class="timeline-title">珠海渔女 → 香炉湾沙滩</div>
+              <div class="timeline-desc">珠海地标"珠海渔女"雕像，背景是蓝天大海。往西步行约15分钟即到香炉湾沙滩，五一期间人气热门，建议早到占位。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🍰</div>
+              <span class="timeline-time">11:30</span>
+              <div class="timeline-title">城市阳台午餐：暴富漏奶华</div>
+              <div class="timeline-desc">珠海情侣路城市阳台，环境优美，网红甜品"暴富漏奶华"必打卡！同时可品尝各类珠海特色小吃，边吃边欣赏海景。</div>
+              <div class="timeline-tips">📸 城市阳台有多个出片机位，背景是情侣路海岸线</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🎭</div>
+              <span class="timeline-time">13:00</span>
+              <div class="timeline-title">日月贝（珠海大剧院）打卡</div>
+              <div class="timeline-desc">国际知名建筑地标，由两个巨型贝壳构成。围绕大剧院有多处最佳拍摄机位，退潮时可近距离拍摄倒影，朋友圈必备大片！</div>
+              <div class="timeline-tips">🌊 退潮时段日月贝倒影最完美，建议提前查询珠海潮汐时间</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🌿</div>
+              <span class="timeline-time">14:30</span>
+              <div class="timeline-title">野狸岛漫步</div>
+              <div class="timeline-desc">连接情侣路的天然岛屿，有步行小径环绕，绿植茂盛，视野开阔。可远眺港珠澳大桥，是拍大桥的好机位。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🌉</div>
+              <span class="timeline-time">16:00</span>
+              <div class="timeline-title">港珠澳大桥观景台</div>
+              <div class="timeline-desc">前往景山公园或口岸附近的大桥观景台，近距离欣赏世界最长跨海大桥，落日时分金光万丈，景色壮观。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🚴</div>
+              <span class="timeline-time">18:00</span>
+              <div class="timeline-title">骑行情侣路看落日</div>
+              <div class="timeline-desc">沿珠海情侣路骑行约8公里，沿途经过石景山、情侣路核心段，五一夕阳约19:00入海，骑行看日落是珠海最经典体验！</div>
+              <div class="timeline-tips">🚲 路边有共享单车（青桔/美团），扫码即骑约¥1/30分钟</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🦆</div>
+              <span class="timeline-time">20:00</span>
+              <div class="timeline-title">晚餐：荣记烧鹅 or 十六潮</div>
+              <div class="timeline-desc">可选荣记海鲜大排档（横琴深井烧鹅，柴炉慢烤7年老店）或十六潮潮汕牛肉（鲜切牛肉+双皮奶甜品天花板）。</div>
+              <div class="timeline-tips">🌙 今晚早点回酒店休息，明天全天澳门，行程丰富！</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- 情侣路/日月贝 carousel -->
+          <div class="attraction-card">
+            <div class="mini-carousel" id="mc-qinglv">
+              <div class="mini-carousel-track" id="mct-qinglv">
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/3ec29113de539259880835a66de460b8/1040g2sg31nmio9ek6m8045fhcpjvvl5dpj5q2q0!nc_n_webp_prv_1" alt="情侣路" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B6B,#FF8E53)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/c29919b5954c703429cf575661e0a280/notes_uhdr/1040g3qo31qr7kc2f7g7045fhcpjvvl5dbe6me1g!nc_n_webp_prv_1" alt="日月贝" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4ECDC4,#45B7AA)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/2c7a5faed342d6c3b6b8c2bb918ddb9d/1040g00831q13o810g0eg49nv316e56kg9gt5h3o!nc_n_webp_prv_1" alt="珠海渔女" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFD93D,#FFC107)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/ddeff2213c8ed6b31dd694b83ac78445/note_pre_post_uhdr/1040g3r031th95efilm305nhvqhn08gq2pipslt8!nc_n_webp_prv_1" alt="珠海海岸" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#6C5CE7,#a29bfe)'">
+                </div>
+              </div>
+              <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('qinglv')">&#8249;</button>
+              <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('qinglv')">&#8250;</button>
+              <div class="mini-carousel-dots" id="mcd-qinglv">
+                <button class="mini-dot active" onclick="miniGo('qinglv',0)"></button>
+                <button class="mini-dot" onclick="miniGo('qinglv',1)"></button>
+                <button class="mini-dot" onclick="miniGo('qinglv',2)"></button>
+                <button class="mini-dot" onclick="miniGo('qinglv',3)"></button>
+              </div>
+            </div>
+            <div class="attraction-info">
+              <span class="attraction-tag">🌅 Day 2 主景点</span>
+              <div class="attraction-name">情侣路 & 日月贝大剧院</div>
+              <div class="attraction-desc">全长约28公里的滨海大道，堪称中国最美海岸线之一。日月贝大剧院是珠海城市名片，由国际建筑大师操刀设计，外形如双贝壳，在海中央熠熠生辉。</div>
+              <div class="attraction-meta">
+                <div class="meta-item">📍 <strong>珠海情侣路全线</strong></div>
+                <div class="meta-item">🎫 <strong>免费</strong></div>
+                <div class="meta-item">⏰ <strong>全天开放</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 长隆 carousel -->
+          <div class="attraction-card" style="margin-top:20px;">
+            <div class="mini-carousel" id="mc-chimelong">
+              <div class="mini-carousel-track" id="mct-chimelong">
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/9667f517b9d36f15c70065af31cbe5d1/notes_pre_post/1040g3k831qcsm5jvga5g5pb0vmp209jt9gkemmo!nc_n_webp_prv_1" alt="长隆海洋王国" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#0984e3,#74b9ff)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/7afbb98689b40bf001ba23328dece2b1/notes_pre_post/1040g3k831r9l9811g07g4930o96se5ne3h78kng!nc_n_webp_prv_1" alt="长隆烟火" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fd79a8,#e84393)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132329/66e17d3227d368152b44fce50ce25efd/notes_pre_post/1040g3k831s4408c25mb04a0rs2qt4i6k2hucm80!nc_n_webp_prv_1" alt="长隆夜景" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#6C5CE7,#a29bfe)'">
+                </div>
+              </div>
+              <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('chimelong')">&#8249;</button>
+              <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('chimelong')">&#8250;</button>
+              <div class="mini-carousel-dots" id="mcd-chimelong">
+                <button class="mini-dot active" onclick="miniGo('chimelong',0)"></button>
+                <button class="mini-dot" onclick="miniGo('chimelong',1)"></button>
+                <button class="mini-dot" onclick="miniGo('chimelong',2)"></button>
+              </div>
+            </div>
+            <div class="attraction-info">
+              <span class="attraction-tag">🎡 可选景点</span>
+              <div class="attraction-name">长隆海洋王国（可替代或补充）</div>
+              <div class="attraction-desc">全球最大海洋主题乐园之一，含鲸鲨馆、海豚剧场、极速过山车等，适合亲子家庭。若时间充裕可安排半天。五一建议提前购票。</div>
+              <div class="attraction-meta">
+                <div class="meta-item">📍 <strong>珠海横琴岛</strong></div>
+                <div class="meta-item">🎫 <strong>约¥380-480/人</strong></div>
+                <div class="meta-item">⏰ <strong>建议4-6小时</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div id="tab-day3" class="tab-content">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+        <div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot">🌅</div>
+              <span class="timeline-time">08:30</span>
+              <div class="timeline-title">酒店出发 → 寄存行李 → 前往拱北口岸</div>
+              <div class="timeline-desc">早餐后退房，将大件行李存放在<strong>拱北口岸附近行李寄存处</strong>（约¥15-25/件），轻装游澳门！带好<strong>港澳通行证+有效签注</strong>，步行至拱北口岸。</div>
+              <div class="timeline-tips">🧳 行李寄存：拱北口岸地下商场内有多家寄存点 | 📋 带好：港澳通行证+签注（必须，没有无法过关！）| 💰 建议带备用澳门元或刷卡消费</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🛂</div>
+              <span class="timeline-time">09:00</span>
+              <div class="timeline-title">拱北口岸过关 → 进入澳门！</div>
+              <div class="timeline-desc">五一期间拱北口岸预计排队<strong>约1-1.5小时</strong>，约09:00-10:00左右通关完成，进入澳门关闸广场。过关后乘3路公交（6MOP）或步行进入澳门市区。</div>
+              <div class="timeline-tips">⚠️ 五一建议错峰：08:30-09:30人较多，耐心等待 | 🟢 青茂口岸队伍相对较短，可备用 | 🚌 关闸→大三巴3路公交约20分钟</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🏛️</div>
+              <span class="timeline-time">10:30</span>
+              <div class="timeline-title">大三巴牌坊 + 恋爱巷 + 免费试吃</div>
+              <div class="timeline-desc">澳门必去地标：<strong>①大三巴牌坊</strong>（正面仰拍，早上光线最好）→ <strong>②大炮台</strong>俯瞰全城（免费）→ <strong>③恋爱巷</strong>（粉红网红小巷）→ <strong>④肉干街</strong>（全程免费试吃猪肉干/腰果！）</div>
+              <div class="timeline-tips">📸 恋爱巷超出片，粉色外墙+葡式瓦片，强烈推荐 | 🆓 肉干街约10家店铺全部可试吃，相当于免费下午茶 | ⏰ 此区域建议2-2.5小时</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🍱</div>
+              <span class="timeline-time">12:30</span>
+              <div class="timeline-title">澳门老城区午餐：葡挞 + 猪扒包</div>
+              <div class="timeline-desc">澳门必吃：<strong>玛嘉烈蛋挞</strong>（葡式蛋挞鼻祖，¥10/个）、<strong>大利来记猪扒包</strong>（厚切猪扒+软面包，约38MOP）。官也街或大三巴附近商铺均有。</div>
+              <div class="timeline-tips">🥧 蛋挞建议现买现吃，刚出炉10分钟内最好吃！| 🐷 猪扒包是澳门灵魂食物，必吃！| 💰 午餐预算约50-80 MOP/人</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🎰</div>
+              <span class="timeline-time">13:30</span>
+              <div class="timeline-title">永利澳门（免费指甲油）→ 美高梅（免费奶茶）</div>
+              <div class="timeline-desc">澳门「白嫖攻略」精华：<strong>①永利澳门大堂</strong>进门即可免费领取精美指甲油一支（颜色丰富，无需消费）→ <strong>②美高梅大堂</strong>有免费珍珠奶茶自取（软糯Q弹，完全免费）。</div>
+              <div class="timeline-tips">💅 永利免费指甲油是小红书爆款，人手必打卡！| 🧋 美高梅免费饮品在大堂右侧，进门即见 | 🚌 乘赌场免费穿梭车往返，不需要打车</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🎠</div>
+              <span class="timeline-time">14:30</span>
+              <div class="timeline-title">金光大道：威尼斯人 + 伦敦人 + 巴黎人</div>
+              <div class="timeline-desc">乘坐各大赌场<strong>免费发财车</strong>（路环/氹仔方向），游览澳门三大综合体：<strong>威尼斯人</strong>（意大利运河街，贡多拉船160MOP可选）+ <strong>伦敦人</strong>（1:1大本钟）+ <strong>巴黎人</strong>（半比例埃菲尔铁塔）</div>
+              <div class="timeline-tips">🚌 关闸→金光大道乘威尼斯人免费接驳巴士约20分钟 | 📸 三个场馆均免费入内拍照，约需2-2.5小时 | 🎡 威尼斯人贡多拉船建议提前购票</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🍜</div>
+              <span class="timeline-time">17:00</span>
+              <div class="timeline-title">官也街晚餐：澳门美食集中地</div>
+              <div class="timeline-desc">氹仔官也街是澳门美食终极聚集地：<strong>金利食店</strong>墨鱼丸鸡米（42MOP）→ <strong>大利来记</strong>下午猪扒包 → <strong>雍记</strong>芒果糯米糍（7MOP）→ <strong>义顺</strong>双皮奶（25MOP）。吃完备战回程！</div>
+              <div class="timeline-tips">🍽️ 官也街→拱北口岸乘公交约30-40分钟 | ⏰ 17:00出发吃饭，17:45出发前往关闸，确保18:00前能到拱北侧 | 💡 出关比入关快，五一约30-60分钟</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🛂</div>
+              <span class="timeline-time">18:00</span>
+              <div class="timeline-title">出关！返回珠海拱北口岸</div>
+              <div class="timeline-desc">约18:00从澳门侧出关，过关返回珠海。先去<strong>寄存点取回行李</strong>（拱北口岸地下商场），整理行装，步行至<strong>拱北口岸公交站</strong>等候大巴。</div>
+              <div class="timeline-tips">⏰ 出关预留1小时，约19:00左右完成取行李 | 🚶 拱北口岸→公交站步行约5-10分钟 | 📱 提前在淘出行APP查好20:30班次并购票</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">🚌</div>
+              <span class="timeline-time">20:30</span>
+              <div class="timeline-title">淘出行跨城大巴 → 宝安中心！圆满收官</div>
+              <div class="timeline-desc">在<strong>拱北口岸公交站</strong>乘坐<strong>淘出行跨城巴士</strong>（¥29.9/人，提前APP购票），直达深圳宝安中心，全程约1.5小时，约<strong>22:00到家</strong>！</div>
+              <div class="timeline-tips">🚌 淘出行APP购票，搜索「珠海拱北→深圳宝安」 | ⏰ 20:30发车，建议20:00前到站候车 | 🏠 约22:00回到宝安中心，完美结束3天2夜！| 🔁 若错过末班：打车到珠海北站搭高铁回深圳</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- 澳门大三巴 carousel -->
+          <div class="attraction-card">
+            <div class="mini-carousel" id="mc-macao">
+              <div class="mini-carousel-track" id="mct-macao">
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/6a13a6a042b8226e5a5639dd419a6872/notes_pre_post/1040g3k831q429i947o004bohir7knqfobp9nk18!nc_n_webp_prv_1" alt="大三巴" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFD93D,#FFC107)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/434eb89878597c57ac29035a1735f9c1/1040g2sg31p676r3oiu705ni37qig95otim2u950!nc_n_webp_prv_1" alt="澳门历史" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e17055,#d63031)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/b61058a82af629356ff87baaf80e6ca7/1040g2sg31o4l82nlmg705n6u02ghdp1681ltnsg!nc_n_webp_prv_1" alt="澳门街道" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fd79a8,#e84393)'">
+                </div>
+              </div>
+              <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('macao')">&#8249;</button>
+              <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('macao')">&#8250;</button>
+              <div class="mini-carousel-dots" id="mcd-macao">
+                <button class="mini-dot active" onclick="miniGo('macao',0)"></button>
+                <button class="mini-dot" onclick="miniGo('macao',1)"></button>
+                <button class="mini-dot" onclick="miniGo('macao',2)"></button>
+              </div>
+            </div>
+            <div class="attraction-info">
+              <span class="attraction-tag">🏛️ Day 3 主景点</span>
+              <div class="attraction-name">澳门历史老城区 — 世界文化遗产</div>
+              <div class="attraction-desc">以大三巴牌坊为核心，澳门历史城区是世界文化遗产，融合中葡文化。恋爱巷、玫瑰圣母堂、市政署大楼共同构成独特的南欧小城风情。</div>
+              <div class="attraction-meta">
+                <div class="meta-item">📍 <strong>澳门半岛中心区</strong></div>
+                <div class="meta-item">🎫 <strong>免费（博物馆20MOP）</strong></div>
+                <div class="meta-item">⏰ <strong>建议3-4小时</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 威尼斯人 carousel -->
+          <div class="attraction-card" style="margin-top:20px;">
+            <div class="mini-carousel" id="mc-venetian">
+              <div class="mini-carousel-track" id="mct-venetian">
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/51a855a7f8d90cfb6a921dd679be6f56/1040g2sg31obb7g5l6m2g5pr6ij2m2tl4pm4v7j0!nc_n_webp_prv_1" alt="威尼斯人" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#6C5CE7,#a29bfe)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/c35c9866a801be8e0143bdbbd4b8b4e8/notes_pre_post/1040g3k031o8kk4n2l8504aj04cph9nl5160u718!nc_n_webp_prv_1" alt="伦敦人" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#0984e3,#74b9ff)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/5b7af6b9f200d65e2d931e0c045dfbd7/1040g2sg31r464vojnu7g4a06i0e334luhikks90!nc_n_webp_prv_1" alt="澳门金光" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B6B,#FF8E53)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/dcb3120868f21dd032ffb4966ebd428d/notes_pre_post/1040g3k831p4s7i7o2o9g4a72khup045l646rhc8!nc_n_webp_prv_1" alt="巴黎人" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fdcb6e,#e17055)'">
+                </div>
+              </div>
+              <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('venetian')">&#8249;</button>
+              <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('venetian')">&#8250;</button>
+              <div class="mini-carousel-dots" id="mcd-venetian">
+                <button class="mini-dot active" onclick="miniGo('venetian',0)"></button>
+                <button class="mini-dot" onclick="miniGo('venetian',1)"></button>
+                <button class="mini-dot" onclick="miniGo('venetian',2)"></button>
+                <button class="mini-dot" onclick="miniGo('venetian',3)"></button>
+              </div>
+            </div>
+            <div class="attraction-info">
+              <span class="attraction-tag">🎰 Day 3 必去</span>
+              <div class="attraction-name">威尼斯人 + 伦敦人 + 巴黎人</div>
+              <div class="attraction-desc">澳门金光大道上三大综合体，威尼斯人内部仿造意大利水城，伦敦人有1:1大本钟，巴黎人有半比例埃菲尔铁塔，均可免费入内拍照游览！</div>
+              <div class="attraction-meta">
+                <div class="meta-item">📍 <strong>澳门氹仔金光大道</strong></div>
+                <div class="meta-item">🎫 <strong>免费进入</strong></div>
+                <div class="meta-item">⏰ <strong>建议2-3小时</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 澳门口岸 carousel -->
+          <div class="attraction-card" style="margin-top:20px; border:2px solid rgba(255,107,107,0.2);">
+            <div class="mini-carousel" id="mc-border">
+              <div class="mini-carousel-track" id="mct-border">
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/88c498d544fcfa020ffee20bebe38948/notes_pre_post/1040g3k031qjlfvbsn00048ts5nruq4ofirk5be8!nc_n_webp_prv_1" alt="拱北口岸" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#dfe6e9,#b2bec3)'">
+                </div>
+                <div class="mini-carousel-slide">
+                  <img src="https://sns-webpic-qc.xhscdn.com/202604132331/7551d11237fc6f82e6aa3871d5895d00/notes_pre_post/1040g3k831rse6fvr2m705nir71u08rvs3mkb6v0!nc_n_webp_prv_1" alt="澳门关闸" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#636e72,#2d3436)'">
+                </div>
+              </div>
+              <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('border')">&#8249;</button>
+              <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('border')">&#8250;</button>
+              <div class="mini-carousel-dots" id="mcd-border">
+                <button class="mini-dot active" onclick="miniGo('border',0)"></button>
+                <button class="mini-dot" onclick="miniGo('border',1)"></button>
+              </div>
+            </div>
+            <div class="attraction-info">
+              <span class="attraction-tag" style="background:rgba(255,107,107,0.15);">⚠️ 重要提醒</span>
+              <div class="attraction-name">拱北↔澳门过关须知</div>
+              <div class="attraction-desc">三个过关口岸：拱北口岸（最近，人最多）、青茂口岸（较新，人较少，需乘shuttle）、横琴口岸（连接横琴粤澳新区）。五一高峰期建议早出晚归。</div>
+              <div class="attraction-meta">
+                <div class="meta-item">📋 <strong>港澳通行证 + 签注必备</strong></div>
+                <div class="meta-item">⏰ <strong>五一高峰等待约1-1.5h</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOTELS SECTION -->
+<section id="hotels" class="bg-gray">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">WHERE TO STAY</span>
+      <h2 class="section-title">🏨 五一住宿推荐</h2>
+      <p class="section-subtitle">（五一涨价预警：提前预订更优惠！）</p>
+    </div>
+
+    <div class="hotel-warning fade-in">
+      <div class="hotel-warning-icon">⚠️</div>
+      <div class="hotel-warning-text">
+        <strong>五一黄金周（5月1-5日）珠海酒店普遍上涨30-50%</strong>，以下价格为实际五一期间价格。部分热门酒店早在2个月前即已售罄，建议<strong>提前2-3周在携程/去哪儿预订</strong>！
+      </div>
+    </div>
+
+    <div class="hotels-grid fade-in">
+
+      <!-- Hotel 1 -->
+      <div class="hotel-card">
+        <div class="hotel-img" style="background:linear-gradient(135deg,#FF6B6B,#FF8E53);">
+          <span>🏨</span>
+          <span class="hotel-badge">经济型</span>
+        </div>
+        <div class="hotel-info">
+          <div class="hotel-name">汉庭珠海北山大院店</div>
+          <div class="hotel-stars">★★★ <span>经济型</span></div>
+          <div class="hotel-location">📍 横琴长隆附近·珠海北山</div>
+          <div class="hotel-price-row">
+            <div class="hotel-price">平时 ¥180-240/晚</div>
+            <div class="hotel-price-may">五一 ¥340/晚起 (携程价)</div>
+          </div>
+          <div class="hotel-tags">
+            <span class="hotel-tag">经济实惠</span>
+            <span class="hotel-tag">长隆近邻</span>
+            <span class="hotel-tag">五一性价比王</span>
+          </div>
+          <div class="hotel-highlight">"五一5天4晚可省¥3800！XHS大赞攻略推荐"</div>
+        </div>
+        <a href="https://hotels.ctrip.com/hotel/zhuhai31.html" target="_blank" class="hotel-btn">携程立即预订</a>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="hotel-card">
+        <div class="hotel-img" style="background:linear-gradient(135deg,#4ECDC4,#45B7AA);">
+          <span>🏩</span>
+          <span class="hotel-badge">舒适型</span>
+        </div>
+        <div class="hotel-info">
+          <div class="hotel-name">桔子精选·珠海拱北口岸</div>
+          <div class="hotel-stars">★★★ <span>舒适型</span></div>
+          <div class="hotel-location">📍 香洲区拱北围基路·步行5分钟过关</div>
+          <div class="hotel-price-row">
+            <div class="hotel-price">平时 ¥220-280/晚</div>
+            <div class="hotel-price-may">五一 ¥420/晚起</div>
+          </div>
+          <div class="hotel-tags">
+            <span class="hotel-tag">口岸近邻</span>
+            <span class="hotel-tag">智能客控</span>
+            <span class="hotel-tag">自助早餐</span>
+          </div>
+          <div class="hotel-highlight">"拱北口岸步行5分钟，港澳通关超方便"</div>
+        </div>
+        <a href="https://hotels.ctrip.com/hotel/zhuhai31.html" target="_blank" class="hotel-btn">携程立即预订</a>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="hotel-card">
+        <div class="hotel-img" style="background:linear-gradient(135deg,#FFD93D,#FFC107);">
+          <span>🏨</span>
+          <span class="hotel-badge">推荐</span>
+        </div>
+        <div class="hotel-info">
+          <div class="hotel-name">桔子酒店·珠海拱北奥园广场</div>
+          <div class="hotel-stars">★★★☆ <span>高品质型</span></div>
+          <div class="hotel-location">📍 距拱北口岸800m·近青茂口岸</div>
+          <div class="hotel-price-row">
+            <div class="hotel-price">平时 ¥260-320/晚</div>
+            <div class="hotel-price-may">五一 ¥460/晚起</div>
+          </div>
+          <div class="hotel-tags">
+            <span class="hotel-tag">雅高床品</span>
+            <span class="hotel-tag">智能语音控房</span>
+            <span class="hotel-tag">免费咖啡</span>
+          </div>
+          <div class="hotel-highlight">"比海景酒店省¥800/晚，XHS携程双平台5星好评！"</div>
+        </div>
+        <a href="https://hotels.ctrip.com/hotel/zhuhai31.html" target="_blank" class="hotel-btn">携程立即预订</a>
+      </div>
+
+
+      <!-- Hotel 5 -->
+      <div class="hotel-card">
+        <div class="hotel-img" style="background:linear-gradient(135deg,#fd79a8,#e84393);">
+          <span>🌅</span>
+          <span class="hotel-badge">民宿</span>
+        </div>
+        <div class="hotel-info">
+          <div class="hotel-name">珠海情侣路海景精品民宿</div>
+          <div class="hotel-stars">★★★★ <span>精品民宿</span></div>
+          <div class="hotel-location">📍 情侣路核心段·俯瞰港珠澳大桥</div>
+          <div class="hotel-price-row">
+            <div class="hotel-price">平时 ¥260-360/晚</div>
+            <div class="hotel-price-may">五一 ¥500/晚起</div>
+          </div>
+          <div class="hotel-tags">
+            <span class="hotel-tag">180°落地窗</span>
+            <span class="hotel-tag">港珠澳桥景</span>
+            <span class="hotel-tag">海滨泳场</span>
+          </div>
+          <div class="hotel-highlight">"傍晚看落日，夜观港珠澳大桥，XHS网红房"</div>
+        </div>
+        <a href="https://hotels.ctrip.com/hotel/zhuhai31.html" target="_blank" class="hotel-btn">携程立即预订</a>
+      </div>
+
+
+
+      <!-- Hotel 8 -->
+      <div class="hotel-card">
+        <div class="hotel-img" style="background:linear-gradient(135deg,#fdcb6e,#e17055);">
+          <span>🏌️</span>
+          <span class="hotel-badge">舒适</span>
+        </div>
+        <div class="hotel-info">
+          <div class="hotel-name">珠海湾仔北站舒适酒店</div>
+          <div class="hotel-stars">★★★★ <span>舒适型</span></div>
+          <div class="hotel-location">📍 珠海站·拱北口岸·与澳门一河之隔</div>
+          <div class="hotel-price-row">
+            <div class="hotel-price">平时 ¥320-450/晚</div>
+            <div class="hotel-price-may">五一 ¥600/晚起</div>
+          </div>
+          <div class="hotel-tags">
+            <span class="hotel-tag">高尔夫球场</span>
+            <span class="hotel-tag">机器人服务</span>
+            <span class="hotel-tag">免费停车</span>
+          </div>
+          <div class="hotel-highlight">"珠海站享口岸通关便利，湾仔北站No.1热卖"</div>
+        </div>
+        <a href="https://hotels.ctrip.com/hotel/zhuhai31.html" target="_blank" class="hotel-btn">携程立即预订</a>
+      </div>
+
+    </div>
+
+    <div class="booking-cta-box fade-in">
+      <p>💡 以上价格为五一黄金周实际参考区间（2026年5月1-5日），已比平时<strong>上涨30-50%</strong>。建议提前2-3周在携程/去哪儿预订。快速预订入口：</p>
+      <div class="booking-btns">
+        <a href="https://hotels.ctrip.com/hotel/zhuhai31.html" target="_blank" class="booking-btn booking-btn-primary">🏨 携程预订</a>
+        <a href="https://hotel.qunar.com/city/zhuhai/" target="_blank" class="booking-btn booking-btn-secondary">🔍 去哪儿预订</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD SECTION -->
+<section id="food">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">FOOD GUIDE</span>
+      <h2 class="section-title">🍜 美食地图</h2>
+      <p class="section-subtitle">珠海+澳门精选12家必吃餐厅，含免费试吃攻略</p>
+    </div>
+
+    <div class="food-tabs-nav fade-in">
+      <button class="food-tab-btn active" onclick="switchFoodTab('zhuhai', this)">🍤 珠海美食</button>
+      <button class="food-tab-btn" onclick="switchFoodTab('macao', this)">🇲🇴 澳门美食</button>
+    </div>
+
+    <!-- ZHUHAI FOOD -->
+    <div id="food-zhuhai" class="tab-content active">
+      <div class="food-grid fade-in">
+
+        <!-- Food 1 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/1c48086a19be3f470875a5ba9aef43e8/notes_pre_post/1040g3k831se8gioh57h05ofaccgk1038qkrm0do!nc_n_webp_prv_1" alt="叁玖大排档" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B6B,#FF8E53)'">
+            <span class="food-price-badge">人均 ¥89</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">广东热炒 · 海鲜大排档</div>
+            <div class="food-name">叁玖大排档（拱北口岸店）</div>
+            <div class="food-stars">★★★★★ 大众点评4.5 | 广州菜热门榜No.2</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>爆膏大头虾🦐 / 叁玖豉油鸡 / 黄椒酱蒸生蚝 / 皮皮虾 / 捞汁海鲜鱿鱼</div>
+            <div class="food-address">📍 香洲区拱北围基路28号3栋西海名苑一层21号</div>
+            <div class="food-tags">
+              <span class="food-tag">本地必吃</span>
+              <span class="food-tag">烟火气</span>
+              <span class="food-tag">XHS 9585赞爆推</span>
+            </div>
+            <div class="food-xhs">"和朋友都吃过瘾了，烟火气直接拉满！来珠海玩下高铁第一件事直奔这里！"</div>
+            <a href="https://www.amap.com/search?query=叁玖大排档&city=珠海" target="_blank" class="food-map-link">📍 高德地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 2 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/2a6b88692a324c5cebd31574d2caa0fc/notes_pre_post/1040g3k031o9scmgtmm405oag2kknunfmebv9ov8!nc_n_webp_prv_1" alt="十六潮" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e17055,#d63031)'">
+            <span class="food-price-badge">人均 ¥70</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">潮汕牛肉 · 甜品</div>
+            <div class="food-name">十六潮·潮汕牛肉（长隆区域）</div>
+            <div class="food-stars">★★★★★ XHS 8613赞</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>明档鲜切潮汕牛肉🥩 / 手打牛肉丸 / 双皮奶 / 榴莲肠粉 / 椰奶小方鸭母捻</div>
+            <div class="food-address">📍 珠海长隆附近（具体以高德地图为准）</div>
+            <div class="food-tags">
+              <span class="food-tag">长隆必吃</span>
+              <span class="food-tag">潮汕味道</span>
+              <span class="food-tag">甜品天花板</span>
+            </div>
+            <div class="food-xhs">"吃到几个拳头大的潮汕牛肉丸！好鲜！双皮奶甜品真的没法不爱！"</div>
+            <a href="https://www.amap.com/search?query=十六潮潮汕牛肉&city=珠海" target="_blank" class="food-map-link">📍 高德地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 3 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/168835d7684c0f8b4d821996859b834c/notes_uhdr/1040g3qg31rji98anj2005nf8i1ng9ddu63247a8!nc_n_webp_prv_1" alt="荣记海鲜" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#00b894,#00cec9)'">
+            <span class="food-price-badge">人均 ¥80-120</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">粤式烧味 · 海鲜</div>
+            <div class="food-name">荣记海鲜大排档（横琴深井村）</div>
+            <div class="food-stars">★★★★★ 7年老店</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>深井烧鹅🦆 / 陈村粉 / 横琴大生蚝 / 波士顿龙虾 / 椰子冰粥</div>
+            <div class="food-address">📍 珠海横琴深井村93号</div>
+            <div class="food-tags">
+              <span class="food-tag">7年老店</span>
+              <span class="food-tag">柴炉烧鹅</span>
+              <span class="food-tag">本地人回头客</span>
+            </div>
+            <div class="food-xhs">"店门口两个明炉烧烤，师傅正忙着烤烧鸡烧鹅叉烧，香味扑鼻！"</div>
+            <a href="https://www.amap.com/search?query=荣记海鲜大排档横琴&city=珠海" target="_blank" class="food-map-link">📍 高德地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 4 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/f8f9ccb29d23a5894a83e730c00e3d12/notes_pre_post/1040g3k031pv53mihn61g5n75flilgb645d6doh8!nc_n_webp_prv_1" alt="俊兴海鲜" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#0984e3,#74b9ff)'">
+            <span class="food-price-badge">人均 ¥100-150</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">海鲜大排档</div>
+            <div class="food-name">俊兴海鲜大排档</div>
+            <div class="food-stars">★★★★☆ 15年老店</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>大花甲 / 九节虾 / 炸生蚝 / 蒜蓉粉丝扇贝 / 各类时令海鲜</div>
+            <div class="food-address">📍 珠海横琴附近（以高德为准）</div>
+            <div class="food-tags">
+              <span class="food-tag">15年老字号</span>
+              <span class="food-tag">明码标价</span>
+              <span class="food-tag">无套路</span>
+            </div>
+            <div class="food-xhs">"海鲜都很新鲜！没有一个踩雷的！明码标价，丰俭皆可"</div>
+            <a href="https://www.amap.com/search?query=俊兴海鲜大排档&city=珠海" target="_blank" class="food-map-link">📍 高德地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 5 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/e7235f5712db0b4e2c14c6136404df98/notes_pre_post/1040g3k031s3d018pla204a1797nl2opnqqjjugg!nc_n_webp_prv_1" alt="城市阳台" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fdcb6e,#e17055)'">
+            <span class="food-price-badge">人均 ¥30-50</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">网红甜品 · 小吃</div>
+            <div class="food-name">城市阳台·暴富漏奶华</div>
+            <div class="food-stars">★★★★☆</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>暴富漏奶华🍰 / 珠海特色小吃</div>
+            <div class="food-address">📍 珠海情侣路城市阳台</div>
+            <div class="food-tags">
+              <span class="food-tag">网红打卡</span>
+              <span class="food-tag">情侣路必吃</span>
+              <span class="food-tag">出片神器</span>
+            </div>
+            <div class="food-xhs">"城市阳台的暴富漏奶华，好吃！逛完海岸线在这里打个卡！"</div>
+            <a href="https://www.amap.com/search?query=城市阳台&city=珠海" target="_blank" class="food-map-link">📍 高德地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 6 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132329/1a2c138be954cdc2e2f35dfbe11d59df/1040g00831s5tjrmdlk5g5ntoim5g8fj0f6ek7f8!nc_n_webp_prv_1" alt="勝记茶档" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#6C5CE7,#a29bfe)'">
+            <span class="food-price-badge">人均 ¥60-80</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">港式火锅 · 茶档</div>
+            <div class="food-name">勝记茶档·香港沙爹火锅（夏湾店）</div>
+            <div class="food-stars">★★★★☆</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>沙爹牛肉锅🔥 / 大生蚝 / 牛肉丸 / 港式沙爹酱</div>
+            <div class="food-address">📍 珠海夏湾</div>
+            <div class="food-tags">
+              <span class="food-tag">港式风味</span>
+              <span class="food-tag">老字号茶档</span>
+              <span class="food-tag">本地隐藏好店</span>
+            </div>
+            <div class="food-xhs">"超好吃！牛肉、大生蚝、牛肉丸…连方便面都好吃！"</div>
+            <a href="https://www.amap.com/search?query=勝记茶档&city=珠海" target="_blank" class="food-map-link">📍 高德地图导航</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MACAO FOOD -->
+    <div id="food-macao" class="tab-content">
+      <div class="food-grid fade-in">
+
+        <!-- Food 7 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132332/ec3be68fcc24f39c937adbee1e95c9e4/1040g00831q0al9lk7g1g49rthjrvcb87vkolb40!nc_n_webp_prv_1" alt="金利食店" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFD93D,#FFC107)'">
+            <span class="food-price-badge">42 MOP/人</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">澳门传统小吃</div>
+            <div class="food-name">金利食店（官也街·鸡米）</div>
+            <div class="food-stars">★★★★☆ 官也街必吃</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>墨鱼丸鸡米🍛(42MOP) / 牛腩（常售罄，需早去）</div>
+            <div class="food-address">📍 澳门官也街（氹仔）</div>
+            <div class="food-tags">
+              <span class="food-tag">官也街No.1</span>
+              <span class="food-tag">XHS强推</span>
+              <span class="food-tag">144元10顿攻略</span>
+            </div>
+            <div class="food-xhs">"澳门24h吃10顿第一站，墨鱼丸鸡米42元，真材实料！"</div>
+            <a href="https://www.amap.com/search?query=金利食店&city=澳门" target="_blank" class="food-map-link">📍 地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 8 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/1779bb7dbd5a672b58e00e1a8a6d999e/1040g00831p61k640ic3g49fhkjjrjjr2s3kmoc8!nc_n_webp_prv_1" alt="安德鲁蛋挞" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fdcb6e,#e17055)'">
+            <span class="food-price-badge">12-15 MOP/个</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">葡式甜点</div>
+            <div class="food-name">安德鲁蛋挞（路环岛）</div>
+            <div class="food-stars">★★★★★ 澳门地标美食</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>葡式蛋挞🥧 / 原味 / 抹茶</div>
+            <div class="food-address">📍 澳门路环岛·安德鲁饼店</div>
+            <div class="food-tags">
+              <span class="food-tag">澳门必吃</span>
+              <span class="food-tag">葡式正宗</span>
+              <span class="food-tag">烫嘴不罢手</span>
+            </div>
+            <div class="food-xhs">"烫嘴也忍不住吃！澳门来了一定要吃这个！"</div>
+            <a href="https://www.amap.com/search?query=安德鲁蛋挞&city=澳门" target="_blank" class="food-map-link">📍 地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 9 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/827e49edf2dc0e4bb8327150fc5d9573/notes_pre_post/1040g3k031ohvvaqjl8004bbmntcq3eefe9ebbs8!nc_n_webp_prv_1" alt="大利来记猪扒包" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e17055,#d63031)'">
+            <span class="food-price-badge">38-49 MOP</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">澳门特色包点</div>
+            <div class="food-name">大利来记猪扒包（氹仔旗舰）</div>
+            <div class="food-stars">★★★★★ 澳门猪扒包天花板</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>猪扒菠萝包🥪(38MOP) / 猪扒法棍 / 鲜奶茶(18MOP)</div>
+            <div class="food-address">📍 澳门氹仔告利雅施利华街35号</div>
+            <div class="food-tags">
+              <span class="food-tag">官也街附近</span>
+              <span class="food-tag">柴炉烤制</span>
+              <span class="food-tag">外脆内软</span>
+            </div>
+            <div class="food-xhs">"猪扒包外皮酥脆，猪扒煎得火候一流，不愧是人气老店！"</div>
+            <a href="https://www.amap.com/search?query=大利来记&city=澳门" target="_blank" class="food-map-link">📍 地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 10 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132332/ec3be68fcc24f39c937adbee1e95c9e4/1040g00831q0al9lk7g1g49rthjrvcb87vkolb40!nc_n_webp_prv_1" alt="美高梅奶茶" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#6C5CE7,#a29bfe)'">
+            <span class="food-price-badge">🆓 完全免费！</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">赌场免费饮品 · 零成本必打卡</div>
+            <div class="food-name">美高梅大堂·免费珍珠奶茶</div>
+            <div class="food-stars">★★★★★ XHS爆款攻略</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>珍珠鲜奶🧋 / 各类免费饮品（无需消费）</div>
+            <div class="food-address">📍 澳门美高梅酒店大堂（MGM Cotai）</div>
+            <div class="food-tags">
+              <span class="food-tag">完全免费</span>
+              <span class="food-tag">XHS爆款</span>
+              <span class="food-tag">无需消费</span>
+            </div>
+            <div class="food-xhs">"进美高梅大堂可免费领奶茶！珍珠软糯Q弹，无需任何消费！"</div>
+            <a href="https://www.amap.com/search?query=美高梅澳门&city=澳门" target="_blank" class="food-map-link">📍 地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 11 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/0bd39346990380fb0df8512d8bdb7285/notes_pre_post/1040g3k831r1g1m110a005p6e55i2pf61em7tisg!nc_n_webp_prv_1" alt="雍记甜品" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFD93D,#FFC107)'">
+            <span class="food-price-badge">7 MOP起</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">澳门传统甜品</div>
+            <div class="food-name">雍记甜品（芒果糯米糍）</div>
+            <div class="food-stars">★★★★☆</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>芒果糯米糍🥭(7MOP) / 双皮奶 / 各款糯米糍</div>
+            <div class="food-address">📍 澳门大三巴附近</div>
+            <div class="food-tags">
+              <span class="food-tag">超低价</span>
+              <span class="food-tag">传统手工</span>
+              <span class="food-tag">7块钱的快乐</span>
+            </div>
+            <div class="food-xhs">"7澳门币一个芒果糯米糍，物美价廉，144元吃10顿必打卡！"</div>
+            <a href="https://www.amap.com/search?query=雍记甜品&city=澳门" target="_blank" class="food-map-link">📍 地图导航</a>
+          </div>
+        </div>
+
+        <!-- Food 12 -->
+        <div class="food-card">
+          <div class="food-img">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132331/5172250989eb1a61104ea647695093b3/notes_pre_post/1040g3k831oj9290d4u005oe8fvl413mamsg1fmo!nc_n_webp_prv_1" alt="澳门肉干" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#fd79a8,#e84393)'">
+            <span class="food-price-badge">🆓 免费试吃</span>
+          </div>
+          <div class="food-info">
+            <div class="food-category">澳门手信 · 伴手礼</div>
+            <div class="food-name">大三巴沿途免费肉干试吃</div>
+            <div class="food-stars">★★★★★</div>
+            <div class="food-dishes"><strong>招牌菜：</strong>猪肉干 / 腰果 / 各类点心（均可免费试吃）</div>
+            <div class="food-address">📍 大三巴牌坊沿途小吃街</div>
+            <div class="food-tags">
+              <span class="food-tag">免费午餐</span>
+              <span class="food-tag">试吃无压力</span>
+              <span class="food-tag">带货首选</span>
+            </div>
+            <div class="food-xhs">"大三巴沿途经过小吃街，每家都可以免费试吃肉干和点心，相当于免费午饭！"</div>
+            <a href="https://www.amap.com/search?query=大三巴&city=澳门" target="_blank" class="food-map-link">📍 地图导航</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MAPS SECTION -->
+<section id="maps" class="bg-gray">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">ROUTE MAPS</span>
+      <h2 class="section-title">🗺️ 路线地图</h2>
+      <p class="section-subtitle">4张手绘风路线地图，让行程一目了然</p>
+    </div>
+
+    <div class="maps-grid fade-in">
+
+      <!-- Map 1: Overall Route -->
+      <div class="map-card">
+        <div class="map-title">🌐 总览地图（全程路线）</div>
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sea background -->
+          <rect width="600" height="380" fill="#d6f0ff"/>
+          <!-- Guangdong land mass -->
+          <polygon points="0,0 600,0 600,180 480,160 400,140 320,150 250,120 180,130 100,110 0,120" fill="#a8e6cf"/>
+          <!-- Zhuhai peninsula -->
+          <polygon points="240,140 320,150 340,200 330,250 310,280 280,270 260,240 240,210 230,180" fill="#a8e6cf"/>
+          <!-- Macau peninsula -->
+          <polygon points="195,200 230,190 240,210 235,240 215,255 200,250 188,230" fill="#c8f0e8"/>
+          <!-- Guishan Island -->
+          <ellipse cx="420" cy="280" rx="45" ry="30" fill="#a8e6cf"/>
+          <!-- Taipa/Cotai -->
+          <ellipse cx="210" cy="270" rx="25" ry="18" fill="#c8f0e8"/>
+
+          <!-- Shenzhen label area -->
+          <rect x="30" y="55" width="110" height="40" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="85" y="72" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF6B6B">深圳宝安中心</text>
+          <text x="85" y="87" text-anchor="middle" font-size="9" fill="#636e72">出发地</text>
+          <circle cx="85" cy="118" r="6" fill="#FF6B6B"/>
+
+          <!-- Zhuhai label -->
+          <rect x="258" y="175" width="80" height="36" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="298" y="191" text-anchor="middle" font-size="10" font-weight="bold" fill="#4ECDC4">珠海</text>
+          <text x="298" y="204" text-anchor="middle" font-size="8.5" fill="#636e72">Day 1-2 主场</text>
+          <circle cx="298" cy="220" r="6" fill="#4ECDC4"/>
+
+          <!-- Macau label -->
+          <rect x="140" y="208" width="68" height="32" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="174" y="223" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFD93D" stroke="#856404" stroke-width="0.3">澳门</text>
+          <text x="174" y="234" text-anchor="middle" font-size="8" fill="#636e72">Day 3</text>
+          <circle cx="213" cy="230" r="6" fill="#FFD93D"/>
+
+          <!-- Guishan label -->
+          <rect x="378" y="256" width="84" height="36" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="420" y="271" text-anchor="middle" font-size="10" font-weight="bold" fill="#6C5CE7">桂山岛</text>
+          <text x="420" y="283" text-anchor="middle" font-size="8" fill="#636e72">Day 1 渡轮</text>
+          <circle cx="420" cy="295" r="6" fill="#6C5CE7"/>
+
+          <!-- Route: Shenzhen to Zhuhai (train) -->
+          <path d="M 85,118 Q 180,130 298,220" fill="none" stroke="#FF6B6B" stroke-width="3" stroke-dasharray="8,4">
+            <animate attributeName="stroke-dashoffset" values="0;-48" dur="2s" repeatCount="indefinite"/>
+          </path>
+          <!-- Train icon -->
+          <text x="190" y="155" font-size="14" text-anchor="middle">🚄</text>
+          <text x="195" y="170" font-size="8" text-anchor="middle" fill="#FF6B6B">淘出行巴士¥29.9</text>
+
+          <!-- Route: Zhuhai to Guishan (ferry) -->
+          <path d="M 310,235 Q 360,250 415,278" fill="none" stroke="#6C5CE7" stroke-width="3" stroke-dasharray="6,4">
+            <animate attributeName="stroke-dashoffset" values="0;-40" dur="1.8s" repeatCount="indefinite"/>
+          </path>
+          <text x="362" y="252" font-size="13" text-anchor="middle">⛵</text>
+          <text x="362" y="266" font-size="8" text-anchor="middle" fill="#6C5CE7">渡轮50min</text>
+
+          <!-- Route: Zhuhai to Macau (walk) -->
+          <path d="M 280,250 L 220,248" fill="none" stroke="#FFD93D" stroke-width="3" stroke-dasharray="5,3">
+            <animate attributeName="stroke-dashoffset" values="0;-32" dur="1.5s" repeatCount="indefinite"/>
+          </path>
+          <text x="250" y="260" font-size="8" text-anchor="middle" fill="#856404">口岸步行</text>
+
+          <!-- Day color legend -->
+          <rect x="370" y="20" width="210" height="80" rx="10" fill="rgba(255,255,255,0.92)"/>
+          <text x="475" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">行程颜色说明</text>
+          <circle cx="388" cy="52" r="5" fill="#FF6B6B"/>
+          <text x="398" y="56" font-size="9" fill="#555">Day 1 — 珠海+桂山岛</text>
+          <circle cx="388" cy="68" r="5" fill="#4ECDC4"/>
+          <text x="398" y="72" font-size="9" fill="#555">Day 2 — 珠海城市漫游</text>
+          <circle cx="388" cy="84" r="5" fill="#FFD93D" stroke="#C8960C" stroke-width="0.5"/>
+          <text x="398" y="88" font-size="9" fill="#555">Day 3 — 澳门一日游</text>
+
+          <!-- Compass rose -->
+          <g transform="translate(558, 42)">
+            <circle r="18" fill="rgba(255,255,255,0.9)" stroke="#ccc" stroke-width="1"/>
+            <text x="0" y="-8" text-anchor="middle" font-size="8" font-weight="bold" fill="#333">N</text>
+            <text x="0" y="15" text-anchor="middle" font-size="8" fill="#666">S</text>
+            <text x="-13" y="4" text-anchor="middle" font-size="8" fill="#666">W</text>
+            <text x="13" y="4" text-anchor="middle" font-size="8" fill="#666">E</text>
+            <polygon points="0,-15 3,-5 0,-8 -3,-5" fill="#FF6B6B"/>
+            <polygon points="0,15 3,5 0,8 -3,5" fill="#999"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Map 2: Zhuhai-Macau Border -->
+      <div class="map-card">
+        <div class="map-title">🛂 拱北↔澳门通关指南</div>
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="380" fill="#d6f0ff"/>
+          <!-- Zhuhai land -->
+          <polygon points="0,0 300,0 300,380 0,380" fill="#a8e6cf"/>
+          <!-- Macau peninsula -->
+          <polygon points="310,80 560,80 560,280 510,300 460,310 420,295 390,270 380,240 385,180 310,160" fill="#c8f0e8"/>
+          <!-- Cotai/Taipa -->
+          <ellipse cx="480" cy="320" rx="65" ry="28" fill="#b8e8d8"/>
+          <!-- Border line -->
+          <line x1="300" y1="0" x2="300" y2="380" stroke="#FF6B6B" stroke-width="2" stroke-dasharray="8,4"/>
+          <text x="300" y="20" text-anchor="middle" font-size="9" fill="#FF6B6B">— 口岸边界 —</text>
+
+          <!-- Gongbei Port -->
+          <rect x="240" y="155" width="120" height="44" rx="8" fill="#FF6B6B"/>
+          <text x="300" y="173" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">拱北口岸</text>
+          <text x="300" y="188" text-anchor="middle" font-size="8.5" fill="rgba(255,255,255,0.9)">最繁忙 · 人流量大</text>
+          
+          <!-- Qingmao Port -->
+          <rect x="200" y="60" width="120" height="40" rx="8" fill="#4ECDC4"/>
+          <text x="260" y="77" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">青茂口岸</text>
+          <text x="260" y="91" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.9)">较新 · 人少推荐</text>
+
+          <!-- Hengqin Port -->
+          <rect x="15" y="270" width="110" height="40" rx="8" fill="#6C5CE7"/>
+          <text x="70" y="287" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">横琴口岸</text>
+          <text x="70" y="301" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.9)">横琴粤澳新区</text>
+
+          <!-- Macau key spots -->
+          <circle cx="330" cy="175" r="7" fill="#FFD93D" stroke="#C8960C" stroke-width="1.5"/>
+          <text x="345" y="179" font-size="9" fill="#333">关闸/澳门边检</text>
+
+          <circle cx="395" cy="140" r="6" fill="#fd79a8"/>
+          <text x="406" y="144" font-size="9" fill="#333">大三巴</text>
+
+          <circle cx="420" cy="175" r="6" fill="#fd79a8"/>
+          <text x="431" y="179" font-size="9" fill="#333">玫瑰圣母堂</text>
+
+          <circle cx="380" cy="200" r="6" fill="#e17055"/>
+          <text x="391" y="204" font-size="9" fill="#333">新葡京</text>
+
+          <circle cx="415" cy="215" r="6" fill="#e17055"/>
+          <text x="426" y="219" font-size="9" fill="#333">美高梅</text>
+
+          <circle cx="490" cy="290" r="6" fill="#0984e3"/>
+          <text x="501" y="294" font-size="9" fill="#333">威尼斯人</text>
+
+          <circle cx="455" cy="300" r="6" fill="#0984e3"/>
+          <text x="442" y="315" font-size="9" fill="#333">官也街</text>
+
+          <!-- Free bus routes in Macau -->
+          <path d="M 333,182 Q 370,160 393,143" fill="none" stroke="#fd79a8" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <path d="M 333,182 Q 370,190 378,203" fill="none" stroke="#e17055" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <path d="M 410,220 Q 445,255 483,285" fill="none" stroke="#0984e3" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+          <rect x="305" y="330" width="185" height="36" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="397" y="346" text-anchor="middle" font-size="9" fill="#333">--- 赌场免费穿梭巴士</text>
+          <text x="397" y="359" text-anchor="middle" font-size="8.5" fill="#636e72">从关闸/口岸→各大赌场</text>
+
+          <!-- Left label -->
+          <rect x="10" y="15" width="90" height="30" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="55" y="28" text-anchor="middle" font-size="10" font-weight="bold" fill="#4ECDC4">珠海</text>
+          <text x="55" y="40" text-anchor="middle" font-size="8" fill="#636e72">拱北区域</text>
+
+          <rect x="420" y="95" width="70" height="28" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="455" y="110" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFD93D" stroke="#856404" stroke-width="0.2">澳门半岛</text>
+
+          <!-- Compass -->
+          <g transform="translate(568, 42)">
+            <circle r="16" fill="rgba(255,255,255,0.9)" stroke="#ccc" stroke-width="1"/>
+            <text x="0" y="-6" text-anchor="middle" font-size="7" font-weight="bold" fill="#333">N</text>
+            <text x="0" y="13" text-anchor="middle" font-size="7" fill="#666">S</text>
+            <text x="-11" y="4" text-anchor="middle" font-size="7" fill="#666">W</text>
+            <text x="11" y="4" text-anchor="middle" font-size="7" fill="#666">E</text>
+            <polygon points="0,-13 2.5,-4 0,-7 -2.5,-4" fill="#FF6B6B"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Map 3: Lovers Road Cycling -->
+      <div class="map-card">
+        <div class="map-title">🚴 珠海情侣路骑行路线</div>
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="380" fill="#87ceeb"/>
+          <!-- Land mass - coastline -->
+          <path d="M 0,0 L 600,0 L 600,110 Q 560,115 510,125 Q 460,140 420,145 Q 380,148 350,155 Q 310,165 280,170 Q 240,175 200,168 Q 160,162 130,155 Q 90,148 50,142 L 0,140 Z" fill="#a8e6cf"/>
+          <!-- Additional land -->
+          <path d="M 0,140 L 50,142 Q 90,148 130,155 Q 160,162 200,168 Q 240,175 280,170 Q 310,165 350,155 Q 380,148 420,145 Q 460,140 510,125 Q 560,115 600,110 L 600,380 L 0,380 Z" fill="#a8e6cf"/>
+
+          <!-- Cycling path along coast -->
+          <path d="M 50,195 Q 100,188 145,195 Q 190,202 230,210 Q 270,215 310,218 Q 350,220 390,215 Q 430,208 470,200 Q 510,192 550,188" fill="none" stroke="#FF6B6B" stroke-width="4" stroke-dasharray="10,5">
+            <animate attributeName="stroke-dashoffset" values="0;-60" dur="3s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- Stop 1: 爱情邮局 -->
+          <circle cx="55" cy="192" r="10" fill="#FF6B6B"/>
+          <text x="55" y="196" text-anchor="middle" font-size="10" fill="white" font-weight="bold">1</text>
+          <rect x="10" y="208" width="88" height="32" rx="6" fill="rgba(255,255,255,0.95)"/>
+          <text x="54" y="221" text-anchor="middle" font-size="9" font-weight="bold" fill="#FF6B6B">💌 爱情邮局</text>
+          <text x="54" y="233" text-anchor="middle" font-size="7.5" fill="#636e72">浪漫打卡地</text>
+
+          <!-- Stop 2: 珠海渔女 -->
+          <circle cx="148" cy="192" r="10" fill="#FF8E53"/>
+          <text x="148" y="196" text-anchor="middle" font-size="10" fill="white" font-weight="bold">2</text>
+          <rect x="108" y="208" width="80" height="32" rx="6" fill="rgba(255,255,255,0.95)"/>
+          <text x="148" y="221" text-anchor="middle" font-size="9" font-weight="bold" fill="#FF8E53">🐟 珠海渔女</text>
+          <text x="148" y="233" text-anchor="middle" font-size="7.5" fill="#636e72">地标雕像</text>
+
+          <!-- Stop 3: 香炉湾 -->
+          <circle cx="234" cy="207" r="10" fill="#FFD93D"/>
+          <text x="234" y="211" text-anchor="middle" font-size="10" fill="white" font-weight="bold">3</text>
+          <rect x="192" y="223" width="82" height="32" rx="6" fill="rgba(255,255,255,0.95)"/>
+          <text x="233" y="236" text-anchor="middle" font-size="9" font-weight="bold" fill="#C8960C">🏖️ 香炉湾</text>
+          <text x="233" y="248" text-anchor="middle" font-size="7.5" fill="#636e72">沙滩戏水</text>
+
+          <!-- Stop 4: 城市阳台 -->
+          <circle cx="313" cy="215" r="10" fill="#4ECDC4"/>
+          <text x="313" y="219" text-anchor="middle" font-size="10" fill="white" font-weight="bold">4</text>
+          <rect x="270" y="231" width="84" height="32" rx="6" fill="rgba(255,255,255,0.95)"/>
+          <text x="312" y="244" text-anchor="middle" font-size="9" font-weight="bold" fill="#4ECDC4">🍰 城市阳台</text>
+          <text x="312" y="256" text-anchor="middle" font-size="7.5" fill="#636e72">暴富漏奶华</text>
+
+          <!-- Stop 5: 日月贝 -->
+          <circle cx="393" cy="212" r="10" fill="#6C5CE7"/>
+          <text x="393" y="216" text-anchor="middle" font-size="10" fill="white" font-weight="bold">5</text>
+          <rect x="353" y="228" width="80" height="32" rx="6" fill="rgba(255,255,255,0.95)"/>
+          <text x="393" y="241" text-anchor="middle" font-size="9" font-weight="bold" fill="#6C5CE7">🎭 日月贝</text>
+          <text x="393" y="253" text-anchor="middle" font-size="7.5" fill="#636e72">大剧院打卡</text>
+
+          <!-- Stop 6: 野狸岛 -->
+          <circle cx="474" cy="197" r="10" fill="#fd79a8"/>
+          <text x="474" y="201" text-anchor="middle" font-size="10" fill="white" font-weight="bold">6</text>
+          <rect x="434" y="213" width="80" height="32" rx="6" fill="rgba(255,255,255,0.95)"/>
+          <text x="474" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#e84393">🌿 野狸岛</text>
+          <text x="474" y="238" text-anchor="middle" font-size="7.5" fill="#636e72">大桥观景台</text>
+
+          <!-- Cycling icon in sea -->
+          <text x="280" y="300" font-size="28" text-anchor="middle">🚴</text>
+          <text x="280" y="325" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-weight="bold">骑行情侣路 · 约8公里</text>
+          <text x="280" y="340" font-size="9.5" text-anchor="middle" fill="rgba(255,255,255,0.8)">共享单车¥1/30分钟 | 落日时段最美</text>
+
+          <!-- Info box -->
+          <rect x="10" y="285" width="175" height="60" rx="8" fill="rgba(255,255,255,0.9)"/>
+          <text x="97" y="302" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">🚲 骑行小贴士</text>
+          <text x="97" y="316" text-anchor="middle" font-size="8" fill="#636e72">青桔/美团扫码即骑</text>
+          <text x="97" y="328" text-anchor="middle" font-size="8" fill="#636e72">5月日落约19:00</text>
+          <text x="97" y="340" text-anchor="middle" font-size="8" fill="#636e72">全程约2-3小时</text>
+
+          <!-- Compass -->
+          <g transform="translate(568, 42)">
+            <circle r="16" fill="rgba(255,255,255,0.9)" stroke="#ccc" stroke-width="1"/>
+            <text x="0" y="-6" text-anchor="middle" font-size="7" font-weight="bold" fill="#333">N</text>
+            <text x="0" y="13" text-anchor="middle" font-size="7" fill="#666">S</text>
+            <text x="-11" y="4" text-anchor="middle" font-size="7" fill="#666">W</text>
+            <text x="11" y="4" text-anchor="middle" font-size="7" fill="#666">E</text>
+            <polygon points="0,-13 2.5,-4 0,-7 -2.5,-4" fill="#FF6B6B"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Map 4: Guishan Island -->
+      <div class="map-card">
+        <div class="map-title">🏝️ 桂山岛一日游路线</div>
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="380" fill="#87ceeb"/>
+          <!-- Main island shape -->
+          <path d="M 180,120 Q 210,95 250,90 Q 310,85 370,105 Q 420,120 440,160 Q 450,195 435,235 Q 415,270 380,285 Q 340,300 295,298 Q 245,296 210,275 Q 175,252 165,215 Q 155,180 165,150 Z" fill="#a8e6cf"/>
+          <!-- Inner hills effect -->
+          <path d="M 200,160 Q 240,130 290,135 Q 340,140 375,170 Q 395,200 385,235 Q 360,270 310,275 Q 265,278 235,258 Q 200,235 195,195 Z" fill="#8ed8b8" opacity="0.4"/>
+
+          <!-- Dock -->
+          <rect x="155" y="195" width="25" height="40" rx="4" fill="#a0522d"/>
+          <text x="150" y="250" text-anchor="middle" font-size="8" fill="#333">码头</text>
+          <circle cx="150" cy="215" r="6" fill="#FF6B6B"/>
+          <text x="108" y="219" font-size="8.5" fill="#FF6B6B" font-weight="bold">⛵ 出发点</text>
+
+          <!-- Glass Sea 玻璃海 -->
+          <ellipse cx="235" cy="265" rx="35" ry="22" fill="#a8d8ea" stroke="#4ECDC4" stroke-width="2"/>
+          <text x="235" y="270" text-anchor="middle" font-size="9" font-weight="bold" fill="#0984e3">玻璃海</text>
+          <circle cx="235" cy="255" r="6" fill="#4ECDC4"/>
+          <text x="255" y="295" text-anchor="middle" font-size="8" fill="#0984e3">最清澈</text>
+
+          <!-- Lighthouse 奶油灯塔 -->
+          <rect x="358" y="118" width="10" height="30" fill="#fffbe6" stroke="#C8960C" stroke-width="1.5"/>
+          <polygon points="353,118 368,118 363,108" fill="#FF6B6B"/>
+          <circle cx="363" cy="138" r="5" fill="rgba(255,217,61,0.6)"/>
+          <text x="390" y="130" font-size="9" font-weight="bold" fill="#333">奶油灯塔</text>
+          <text x="390" y="142" font-size="8" fill="#636e72">XHS爆款打卡</text>
+          <circle cx="363" cy="140" r="5" fill="#FFD93D"/>
+
+          <!-- 通往大海的路 -->
+          <path d="M 170,220 L 230,262" fill="none" stroke="#6C5CE7" stroke-width="2.5" stroke-dasharray="5,3"/>
+          <text x="190" y="248" text-anchor="middle" font-size="8" fill="#6C5CE7" transform="rotate(-30, 190, 248)">通往大海的路</text>
+
+          <!-- 观景台 -->
+          <circle cx="310" cy="125" r="8" fill="#fd79a8"/>
+          <text x="310" y="128" text-anchor="middle" font-size="8" fill="white" font-weight="bold">台</text>
+          <text x="310" y="115" text-anchor="middle" font-size="8.5" fill="#e84393">观景台</text>
+
+          <!-- Route path on island -->
+          <path d="M 163,215 Q 190,250 235,265 Q 275,275 308,258 Q 340,245 362,225 Q 375,205 363,175 Q 350,150 318,133 Q 295,122 265,120 Q 285,140 310,125" fill="none" stroke="#FF6B6B" stroke-width="2" stroke-dasharray="6,3" opacity="0.8">
+            <animate attributeName="stroke-dashoffset" values="0;-54" dur="4s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- Zhuhai mainland (top left) -->
+          <polygon points="0,0 120,0 110,60 70,80 0,70" fill="#a8e6cf" opacity="0.7"/>
+          <text x="55" y="35" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">珠海</text>
+          <text x="55" y="48" text-anchor="middle" font-size="8" fill="#636e72">香洲港出发</text>
+
+          <!-- Ferry route -->
+          <path d="M 88,68 Q 120,130 155,200" fill="none" stroke="#6C5CE7" stroke-width="2.5" stroke-dasharray="7,4">
+            <animate attributeName="stroke-dashoffset" values="0;-44" dur="2.5s" repeatCount="indefinite"/>
+          </path>
+          <text x="110" y="138" text-anchor="middle" font-size="8" fill="#6C5CE7" transform="rotate(60, 110, 138)">渡轮50min</text>
+
+          <!-- Info legend box -->
+          <rect x="430" y="200" width="165" height="125" rx="10" fill="rgba(255,255,255,0.93)"/>
+          <text x="513" y="218" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">桂山岛攻略</text>
+          <circle cx="442" cy="232" r="4" fill="#FF6B6B"/>
+          <text x="450" y="236" font-size="8.5" fill="#555">码头（出发/返回）</text>
+          <circle cx="442" cy="248" r="4" fill="#4ECDC4"/>
+          <text x="450" y="252" font-size="8.5" fill="#555">玻璃海（最佳拍摄）</text>
+          <circle cx="442" cy="264" r="4" fill="#FFD93D"/>
+          <text x="450" y="268" font-size="8.5" fill="#555">奶油灯塔（地标）</text>
+          <circle cx="442" cy="280" r="4" fill="#fd79a8"/>
+          <text x="450" y="284" font-size="8.5" fill="#555">观景台（俯瞰全岛）</text>
+          <text x="513" y="302" text-anchor="middle" font-size="8" fill="#FF6B6B">⚠️ 注意末班船时间!</text>
+          <text x="513" y="314" text-anchor="middle" font-size="8" fill="#636e72">末班约17:30</text>
+
+          <!-- Compass -->
+          <g transform="translate(568, 38)">
+            <circle r="16" fill="rgba(255,255,255,0.9)" stroke="#ccc" stroke-width="1"/>
+            <text x="0" y="-6" text-anchor="middle" font-size="7" font-weight="bold" fill="#333">N</text>
+            <text x="0" y="13" text-anchor="middle" font-size="7" fill="#666">S</text>
+            <text x="-11" y="4" text-anchor="middle" font-size="7" fill="#666">W</text>
+            <text x="11" y="4" text-anchor="middle" font-size="7" fill="#666">E</text>
+            <polygon points="0,-13 2.5,-4 0,-7 -2.5,-4" fill="#FF6B6B"/>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET CALCULATOR -->
+<section id="budget">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">BUDGET PLANNER</span>
+      <h2 class="section-title">💰 费用预算</h2>
+      <p class="section-subtitle">拖动滑块自定义住宿和餐饮预算，实时更新费用占比</p>
+    </div>
+
+    <div class="budget-wrapper fade-in">
+      <div>
+        <div class="budget-chart-wrapper">
+          <svg viewBox="0 0 320 320" id="budgetDonut">
+            <!-- Donut chart will be drawn by JS -->
+            <circle cx="160" cy="160" r="120" fill="none" stroke="#f0f0f0" stroke-width="40"/>
+            <!-- Segments drawn dynamically -->
+            <g id="donutSegments"></g>
+          </svg>
+          <div class="budget-total-label">
+            <span class="budget-total-amount" id="totalAmount">¥1,700</span>
+            <span class="budget-total-text">总预算/人</span>
+          </div>
+        </div>
+
+        <div class="budget-sliders">
+          <h3>🎛️ 自定义预算</h3>
+          <div class="slider-group">
+            <label>🏨 住宿2晚 <span id="accomLabel">¥700</span></label>
+            <input type="range" id="accomSlider" min="500" max="1600" value="700" step="50" oninput="updateBudget()">
+          </div>
+          <div class="slider-group">
+            <label>🍜 餐饮3天 <span id="foodLabel">¥400</span></label>
+            <input type="range" id="foodSlider" min="200" max="700" value="400" step="20" oninput="updateBudget()">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="budget-legend" id="budgetLegend">
+          <!-- Will be populated by JS -->
+        </div>
+
+        <div style="margin-top:28px;padding:24px;background:linear-gradient(135deg,rgba(255,107,107,0.06),rgba(78,205,196,0.06));border-radius:16px;border:1px solid rgba(78,205,196,0.2);">
+          <div style="font-weight:800;color:#2d3436;margin-bottom:16px;font-size:1rem;">📊 费用说明</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:0.88rem;color:#636e72;">
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>🚢 蛇口→桂山岛渡轮（¥118/人）</span><span style="color:#FF6B6B;font-weight:700;">¥118</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>⛴️ 桂山岛→香洲港回程（¥118/人）</span><span style="color:#FF6B6B;font-weight:700;">¥118</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>🚕 全程打车/公交（预估¥50-80）</span><span style="color:#FF6B6B;font-weight:700;">¥65</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>🚌 拱北→宝安淘出行巴士（¥29.9）</span><span style="color:#FF6B6B;font-weight:700;">¥30</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span style="font-weight:700;color:#444;">🚢 小计：交通总计</span><span style="color:#FF6B6B;font-weight:800;">¥331→约¥420</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>🏨 住宿2晚（拱北附近，五一价）</span><span style="color:#FF6B6B;font-weight:700;" id="accomDisplay">¥700</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>🍜 餐饮（3天：岛上¥200+珠海¥100+澳门¥100）</span><span style="color:#FF6B6B;font-weight:700;" id="foodDisplay">¥400</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px dashed #eee;flex-wrap:wrap;gap:4px;">
+              <span>🎫 门票（景点含澳门博物馆等，多为免费）</span><span style="color:#FF6B6B;font-weight:700;">¥80</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;">
+              <span>🛍️ 其他（手信/购物/杂费）</span><span style="color:#FF6B6B;font-weight:700;">¥100</span>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:12px 16px;background:rgba(255,217,61,0.15);border-radius:10px;border-left:3px solid var(--gold);">
+            <span style="font-size:0.85rem;color:#856404;font-weight:600;">💡 省钱tips：澳门赌场免费穿梭巴士 / 美高梅免费奶茶 / 永利免费指甲油 / 大三巴免费试吃肉干 = 可省¥50-100/人</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BOOKING CHECKLIST -->
+<section id="checklist" class="bg-gradient">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">PRE-TRIP CHECKLIST</span>
+      <h2 class="section-title">✅ 出行清单</h2>
+      <p class="section-subtitle">点击打勾，确保五一出行万无一失</p>
+    </div>
+
+    <div class="checklist-grid fade-in">
+
+      <!-- Group 1 -->
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span style="font-size:1.4rem;">🪪</span> 证件/文件类
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            身份证（有效期内）
+            <small>中国大陆居民必备，全程通行</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            港澳通行证（俗称"回乡证"）
+            <small>进入澳门必须，需提前办理</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            港澳签注（前往澳门签注）
+            <small>需在户籍地公安局办理，电子版即可</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            信用卡/银联卡（澳门消费）
+            <small>澳门通用人民币/港币/澳门币，银联卡直刷</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            澳门币（建议兑换200-500MOP）
+            <small>小摊位/公交可能不刷卡，备些现金</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2 -->
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span style="font-size:1.4rem;">⛵</span> 桂山岛渡轮预订
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            提前7天购买桂山岛渡轮票
+            <small>香洲港→桂山岛，五一热门极易售罄</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            确认渡轮时刻表（往返）
+            <small>特别是末班船时间（通常17:30前）</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            珠海住宿预订（2晚）
+            <small>五一涨价30-50%，提前2-3周预订</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            了解岛上基本信息
+            <small>岛上ATM有限、餐饮较贵，建议带食物饮水</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3 -->
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span style="font-size:1.4rem;">🚄</span> 交通安排
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            淘出行巴士票（5月2日 宝安中心→拱北 ¥29.9）
+            <small>提前2周在12306购买，五一期间热门</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            淘出行返程票（5月4日 拱北→宝安 约¥29.9，20:30发车）
+            <small>晚上返回，确认末班车时间</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            珠海市区公交（1元乘车）
+            <small>开通微信/支付宝乘车码，全市1元</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            共享单车（情侣路骑行）
+            <small>青桔/美团，扫码约¥1/30分钟</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            澳门公交App（澳巴APP）
+            <small>6澳门币乘全程，无需换乘费</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 4 -->
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span style="font-size:1.4rem;">📱</span> 澳门注意事项
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            开通澳门漫游/购买流量包
+            <small>三大运营商日租包，或口岸购澳门SIM卡</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            查询澳门赌场免费穿梭巴士路线
+            <small>关闸口岸有多路免费巴士→威尼斯人/新葡京等</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            了解五一口岸过关高峰时段
+            <small>避开8-10点和19-21点高峰，尽量早出早归</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            美高梅/永利免费福利攻略
+            <small>美高梅免费奶茶 | 永利免费指甲油</small>
+          </div>
+        </div>
+        <div class="checklist-item" onclick="toggleCheck(this)">
+          <input type="checkbox">
+          <div class="checklist-item-text">
+            澳门氹仔官也街美食清单
+            <small>金利食店+大利来记+雍记糯米糍</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Progress bar -->
+    <div style="margin-top:40px;text-align:center;" class="fade-in">
+      <div style="font-size:1.1rem;font-weight:800;color:#2d3436;margin-bottom:12px;">准备进度</div>
+      <div style="background:#f0f0f0;border-radius:100px;height:12px;max-width:400px;margin:0 auto 8px;overflow:hidden;">
+        <div id="progressBar" style="width:0%;height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:100px;transition:width 0.5s ease;"></div>
+      </div>
+      <div id="progressText" style="font-size:0.9rem;color:var(--text-muted);">已完成 0 / 18 项</div>
+    </div>
+  </div>
+</section>
+
+<!-- MACAU NIGHT & TIPS SECTION -->
+<section style="background:linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">
+  <div class="container">
+    <div class="section-header fade-in" style="margin-bottom:48px;">
+      <span class="section-tag" style="background:rgba(255,217,61,0.2);color:#FFD93D;">NIGHT VIBES</span>
+      <h2 class="section-title" style="color:#fff;">🌃 澳门夜景 & 实用贴士</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.7);">灯红酒绿的赌城夜晚，值得细细品味</p>
+    </div>
+
+    <!-- Night photos carousel -->
+    <div style="position:relative;border-radius:20px;overflow:hidden;margin-bottom:48px;" class="fade-in">
+      <div class="mini-carousel" id="mc-night" style="height:320px;">
+        <div class="mini-carousel-track" id="mct-night">
+          <div class="mini-carousel-slide">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132332/1db443732fc26c3e93db666a076da5f6/notes_pre_post/1040g3k031uj02sf92o604a4sji8jh4aae70h7e8!nc_n_webp_prv_1" alt="澳门夜景" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1a2e,#16213e)'">
+          </div>
+          <div class="mini-carousel-slide">
+            <img src="https://sns-webpic-qc.xhscdn.com/202604132332/0bd39346990380fb0df8512d8bdb7285/notes_pre_post/1040g3k831r1g1m110a005p6e55i2pf61em7tisg!nc_n_webp_prv_1" alt="澳门夜景2" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0f3460,#533483)'">
+          </div>
+        </div>
+        <button class="mini-carousel-btn mini-carousel-prev" onclick="miniPrev('night')">&#8249;</button>
+        <button class="mini-carousel-btn mini-carousel-next" onclick="miniNext('night')">&#8250;</button>
+        <div class="mini-carousel-dots" id="mcd-night">
+          <button class="mini-dot active" onclick="miniGo('night',0)"></button>
+          <button class="mini-dot" onclick="miniGo('night',1)"></button>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:32px 40px;background:linear-gradient(transparent,rgba(0,0,0,0.8));z-index:4;">
+          <div style="color:#FFD93D;font-weight:800;font-size:1.3rem;margin-bottom:6px;">华灯初上的澳门</div>
+          <div style="color:rgba(255,255,255,0.85);font-size:0.95rem;">巴黎人埃菲尔铁塔的金色灯光 · 威尼斯人运河倒影 · 新葡京的迷幻霓虹</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips Grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="fade-in">
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px;">
+        <div style="font-size:1.8rem;margin-bottom:10px;">💰</div>
+        <div style="font-weight:800;color:#FFD93D;margin-bottom:8px;">省钱必看</div>
+        <div style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.7;">
+          · 美高梅大堂免费奶茶<br>
+          · 永利大堂免费领指甲油<br>
+          · 赌场穿梭巴士全部免费<br>
+          · 大三巴试吃免费肉干<br>
+          · 糯米糍 7MOP 超便宜
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px;">
+        <div style="font-size:1.8rem;margin-bottom:10px;">⚠️</div>
+        <div style="font-weight:800;color:#FF6B6B;margin-bottom:8px;">避坑提醒</div>
+        <div style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.7;">
+          · 大三巴附近海鲜粥均价偏高<br>
+          · 官也街部分店价格比对面贵<br>
+          · 打的要用官方计程车<br>
+          · 口岸附近换汇汇率差<br>
+          · 不要在街头买"打折纪念品"
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px;">
+        <div style="font-size:1.8rem;margin-bottom:10px;">📸</div>
+        <div style="font-weight:800;color:#4ECDC4;margin-bottom:8px;">摄影攻略</div>
+        <div style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.7;">
+          · 威尼斯人运河反光倒影<br>
+          · 巴黎人埃菲尔铁塔夜景<br>
+          · 大三巴俯拍需上炮台<br>
+          · 恋爱巷粉色墙最佳点<br>
+          · 珠海日月贝退潮时倒影
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🏖️ 珠海·澳门·桂山岛 3日攻略</div>
+  <div class="footer-desc">
+    2026年五一黄金周 · 出发地：深圳宝安中心<br>
+    精心整理自小红书真实用户攻略，祝您旅途愉快！<br>
+    <small style="opacity:0.6;">免责声明：价格仅供参考，以实际预订为准。图片版权归原作者所有，仅供参考展示。</small>
+  </div>
+  <div class="footer-links">
+    <a href="#overview">行程总览</a>
+    <a href="#itinerary">每日行程</a>
+    <a href="#hotels">住宿推荐</a>
+    <a href="#food">美食地图</a>
+    <a href="#maps">路线地图</a>
+    <a href="#budget">费用预算</a>
+    <a href="#checklist">出行清单</a>
+  </div>
+  <div class="footer-copy">© 2026 珠海·澳门·桂山岛五一攻略 | 数据更新：2026年4月</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ===== HERO CAROUSEL =====
+let heroSlide = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
+const heroDots = document.querySelectorAll('.hero-dot');
+
+function goToSlide(n) {
+  heroSlides[heroSlide].classList.remove('active');
+  heroDots[heroSlide].classList.remove('active');
+  heroSlide = (n + heroSlides.length) % heroSlides.length;
+  heroSlides[heroSlide].classList.add('active');
+  heroDots[heroSlide].classList.add('active');
+}
+
+setInterval(() => goToSlide(heroSlide + 1), 4000);
+
+// ===== MINI CAROUSELS =====
+const miniCarousels = {};
+
+function initMiniCarousel(id, count) {
+  miniCarousels[id] = { current: 0, count };
+}
+
+function miniGo(id, n) {
+  const mc = miniCarousels[id];
+  if (!mc) return;
+  mc.current = (n + mc.count) % mc.count;
+  const track = document.getElementById('mct-' + id);
+  if (track) track.style.transform = `translateX(-${mc.current * 100}%)`;
+  const dotsEl = document.getElementById('mcd-' + id);
+  if (dotsEl) {
+    dotsEl.querySelectorAll('.mini-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === mc.current);
+    });
+  }
+}
+
+function miniPrev(id) {
+  const mc = miniCarousels[id];
+  if (mc) miniGo(id, mc.current - 1);
+}
+
+function miniNext(id) {
+  const mc = miniCarousels[id];
+  if (mc) miniGo(id, mc.current + 1);
+}
+
+// Init all mini carousels
+initMiniCarousel('guishan', 3);
+initMiniCarousel('qinglv', 4);
+initMiniCarousel('chimelong', 3);
+initMiniCarousel('macao', 3);
+initMiniCarousel('venetian', 4);
+initMiniCarousel('border', 2);
+initMiniCarousel('night', 2);
+
+// ===== TAB SWITCHING =====
+function switchTab(tabName, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#itinerary .tab-content').forEach(c => c.classList.remove('active'));
+  const target = document.getElementById('tab-' + tabName);
+  if (target) target.classList.add('active');
+}
+
+function switchFoodTab(tabName, btn) {
+  document.querySelectorAll('.food-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#food .tab-content').forEach(c => c.classList.remove('active'));
+  const target = document.getElementById('food-' + tabName);
+  if (target) target.classList.add('active');
+}
+
+// ===== STICKY HEADER =====
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('site-header');
+  header.classList.toggle('scrolled', window.scrollY > 20);
+  const btn = document.getElementById('back-to-top');
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ===== NAV TOGGLE =====
+function toggleNav() {
+  document.getElementById('main-nav').classList.toggle('open');
+}
+
+// ===== FADE IN OBSERVER =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ===== BUDGET CALCULATOR =====
+const budgetData = [
+  { label: '交通', amount: 420, color: '#FF6B6B', emoji: '🚢' },
+  { label: '住宿', amount: 700, color: '#FF8E53', emoji: '🏨' },
+  { label: '餐饮', amount: 400, color: '#4ECDC4', emoji: '🍜' },
+  { label: '门票', amount: 80, color: '#6C5CE7', emoji: '🎫' },
+  { label: '其他', amount: 100, color: '#fd79a8', emoji: '🛍️' },
+];
+
+function updateBudget() {
+  const accom = parseInt(document.getElementById('accomSlider').value);
+  const food = parseInt(document.getElementById('foodSlider').value);
+  
+  budgetData[1].amount = accom;
+  budgetData[2].amount = food;
+  
+  document.getElementById('accomLabel').textContent = '¥' + accom;
+  document.getElementById('foodLabel').textContent = '¥' + food;
+  document.getElementById('accomDisplay').textContent = '¥' + accom;
+  document.getElementById('foodDisplay').textContent = '¥' + food;
+  
+  const total = budgetData.reduce((s, d) => s + d.amount, 0);
+  document.getElementById('totalAmount').textContent = '¥' + total.toLocaleString();
+  
+  drawDonut(total);
+  renderLegend(total);
+}
+
+function drawDonut(total) {
+  const svg = document.getElementById('donutSegments');
+  svg.innerHTML = '';
+  const cx = 160, cy = 160, r = 120, strokeWidth = 40;
+  const circumference = 2 * Math.PI * r;
+  let offset = 0;
+
+  budgetData.forEach(item => {
+    const pct = item.amount / total;
+    const len = pct * circumference;
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', cx);
+    circle.setAttribute('cy', cy);
+    circle.setAttribute('r', r);
+    circle.setAttribute('fill', 'none');
+    circle.setAttribute('stroke', item.color);
+    circle.setAttribute('stroke-width', strokeWidth);
+    circle.setAttribute('stroke-dasharray', `${len} ${circumference - len}`);
+    circle.setAttribute('stroke-dashoffset', -offset + circumference * 0.25);
+    circle.setAttribute('style', 'transition:stroke-dasharray 0.5s ease');
+    svg.appendChild(circle);
+    offset += len;
+  });
+}
+
+function renderLegend(total) {
+  const legend = document.getElementById('budgetLegend');
+  legend.innerHTML = '';
+  budgetData.forEach(item => {
+    const pct = Math.round(item.amount / total * 100);
+    const div = document.createElement('div');
+    div.className = 'budget-item';
+    div.innerHTML = `
+      <div class="budget-color" style="background:${item.color}"></div>
+      <div class="budget-item-info">
+        <div class="budget-item-name">${item.emoji} ${item.label}</div>
+        <div class="budget-item-amount">¥${item.amount.toLocaleString()}</div>
+      </div>
+      <div class="budget-item-pct">${pct}%</div>
+    `;
+    legend.appendChild(div);
+  });
+  // Total row
+  const totalDiv = document.createElement('div');
+  totalDiv.style.cssText = 'display:flex;align-items:center;gap:12px;padding-top:14px;border-top:2px solid #f0f0f0;margin-top:4px;';
+  totalDiv.innerHTML = `
+    <div style="width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));flex-shrink:0;"></div>
+    <div style="flex:1;font-weight:800;color:#2d3436;font-size:1rem;">总计 / 人</div>
+    <div style="font-weight:900;color:var(--primary);font-size:1.1rem;">¥${total.toLocaleString()}</div>
+  `;
+  legend.appendChild(totalDiv);
+}
+
+// Init budget chart
+updateBudget();
+
+// ===== CHECKLIST =====
+let totalItems = 0;
+let checkedItems = 0;
+
+function toggleCheck(el) {
+  const checkbox = el.querySelector('input[type="checkbox"]');
+  const wasChecked = checkbox.checked;
+  checkbox.checked = !wasChecked;
+  el.classList.toggle('checked', checkbox.checked);
+  checkedItems = document.querySelectorAll('.checklist-item.checked').length;
+  totalItems = document.querySelectorAll('.checklist-item').length;
+  const pct = totalItems > 0 ? Math.round(checkedItems / totalItems * 100) : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `已完成 ${checkedItems} / ${totalItems} 项`;
+}
+
+// Count items on load
+window.addEventListener('load', () => {
+  totalItems = document.querySelectorAll('.checklist-item').length;
+  document.getElementById('progressText').textContent = `已完成 0 / ${totalItems} 项`;
+  
+  // Re-run fade-in for any elements that start in viewport
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) el.classList.add('visible');
+  });
+});
+
+// ===== TOUCH SWIPE for mini carousels =====
+document.querySelectorAll('.mini-carousel').forEach(carousel => {
+  let startX = 0;
+  const id = carousel.id.replace('mc-', '');
+
+  carousel.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) {
+      dx < 0 ? miniNext(id) : miniPrev(id);
+    }
+  }, { passive: true });
+});
+
+// ===== MINI CAROUSEL AUTOPLAY =====
+const miniAutoTimers = {};
+function startMiniAutoplay(id, interval) {
+  interval = interval || 3000;
+  if (miniAutoTimers[id]) clearInterval(miniAutoTimers[id]);
+  miniAutoTimers[id] = setInterval(function() { miniNext(id); }, interval);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  ['guishan','qinglv','chimelong','macao','venetian','border'].forEach(function(id) {
+    var el = document.getElementById('mc-' + id);
+    if (el) startMiniAutoplay(id, 3200);
+  });
+});
+
+// ===== SMOOTH SCROLLING FOR NAV =====
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      const offset = 70;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      document.getElementById('main-nav').classList.remove('open');
+    }
+  });
+});
+function openLightbox(src, title, desc) {
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lbTitle').textContent = title;
+  document.getElementById('lbDesc').textContent = desc;
+  const overlay = document.getElementById('lbOverlay');
+  overlay.style.display = 'flex';
+  event.stopPropagation();
+}
+
+// ===== 景点图鉴全宽自动轮播 =====
+let lmCurrent = 0;
+const lmTotal = 9;
+let lmTimer = null;
+
+function lmMove(dir) {
+  lmGo((lmCurrent + dir + lmTotal) % lmTotal);
+}
+
+function lmGo(idx) {
+  const track = document.getElementById('lmTrack');
+  if (!track) return;
+  track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+  document.querySelectorAll('.lm-thumb').forEach(function(t, i) {
+    t.style.background = (i === idx) ? '#FF6B6B' : 'rgba(0,0,0,0.2)';
+    t.style.transform = (i === idx) ? 'scale(1.4)' : 'scale(1)';
+  });
+  lmCurrent = idx;
+  resetLmProgress();
+}
+
+function resetLmProgress() {
+  clearTimeout(lmTimer);
+  const bar = document.getElementById('lmProgress');
+  if (!bar) return;
+  bar.style.transition = 'none';
+  bar.style.width = '0%';
+  setTimeout(function() {
+    bar.style.transition = 'width 4000ms linear';
+    bar.style.width = '100%';
+  }, 50);
+  lmTimer = setTimeout(function() { lmMove(1); }, 4000);
+}
+
+// Touch swipe for landmark carousel
+(function() {
+  var startX = 0;
+  document.addEventListener('DOMContentLoaded', function() {
+    var track = document.getElementById('lmTrack');
+    if (!track) return;
+    var wrap = track.parentElement;
+    wrap.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive:true});
+    wrap.addEventListener('touchend', function(e) {
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) lmMove(dx < 0 ? 1 : -1);
+    }, {passive:true});
+    // Init
+    resetLmProgress();
+  });
+  // Also init immediately if DOM already loaded
+  if (document.readyState !== 'loading') {
+    var track2 = document.getElementById('lmTrack');
+    if (track2) resetLmProgress();
+  }
+})();
+</script>
+
+<!-- 旅行贴士与注意事项 -->
+<section id="tips" style="padding:72px 0;background:linear-gradient(160deg,#ffecd2 0%,#fcb69f 100%);">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:40px;">
+      <span class="section-tag" style="background:linear-gradient(135deg,#FF6B6B,#FF8E53);color:#fff;padding:4px 16px;border-radius:100px;font-size:0.78rem;font-weight:700;">📋 TRAVEL TIPS</span>
+      <h2 class="section-title" style="margin-top:12px;">出行贴士 · 避坑指南</h2>
+      <p class="section-subtitle">五一出行必知，帮你省时省钱省麻烦</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:32px;">
+
+      <!-- 桂山岛贴士 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,0.08);">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,#4ECDC4,#45B7AA);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🏝️</div>
+          <div style="font-weight:800;font-size:1.05rem;color:#2d3436;">桂山岛攻略</div>
+        </div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#4ECDC4;font-weight:700;flex-shrink:0;">✓</span>渡轮票务必提前购买！五一黄金周极易售罄，建议出发前3-5天在「鹏星会」小程序或「招商蛇口邮轮母港」小程序购票</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#4ECDC4;font-weight:700;flex-shrink:0;">✓</span>岛上无大型超市，提前备好防晒、驱蚊、创可贴、急救药品</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#4ECDC4;font-weight:700;flex-shrink:0;">✓</span>玻璃海退潮时间（约上午9-11点）是拍照最佳时机，潮汐表可查"潮汐表"APP</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#4ECDC4;font-weight:700;flex-shrink:0;">✓</span>强风大浪天气渡轮可能停航，出发前查好天气预报，备好备选行程</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF6B6B;font-weight:700;flex-shrink:0;">✕</span>不可随意采摘珊瑚或带走沙石，违者可罚款</li>
+        </ul>
+      </div>
+
+      <!-- 澳门通关贴士 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,0.08);">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,#a29bfe,#6c5ce7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🛂</div>
+          <div style="font-weight:800;font-size:1.05rem;color:#2d3436;">澳门通关须知</div>
+        </div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#6c5ce7;font-weight:700;flex-shrink:0;">✓</span><strong>证件必备</strong>：内地居民需携带「港澳通行证」（回乡证），不接受身份证入境</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#6c5ce7;font-weight:700;flex-shrink:0;">✓</span>五一拱北口岸排队时间可达2-3小时，建议8:00前或午后14:00后过关，错峰出行</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#6c5ce7;font-weight:700;flex-shrink:0;">✓</span>澳门使用<strong>澳门元（MOP）</strong>，1 MOP ≈ 0.88 RMB；人民币可直接使用，无需兑换</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#6c5ce7;font-weight:700;flex-shrink:0;">✓</span>澳门禁止自带烟火爆竹，入境物品需符合海关规定</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF6B6B;font-weight:700;flex-shrink:0;">✕</span>未满18岁禁止进入赌场，请遵守当地法律法规</li>
+        </ul>
+      </div>
+
+      <!-- 五一出行通用建议 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,0.08);">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,#FFD93D,#FF8E53);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🎒</div>
+          <div style="font-weight:800;font-size:1.05rem;color:#2d3436;">五一人群应对</div>
+        </div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF8E53;font-weight:700;flex-shrink:0;">✓</span>所有热门景点、餐厅提前3-7天预约，五一期间现场排队 1-2 小时是常态</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF8E53;font-weight:700;flex-shrink:0;">✓</span>酒店建议提前3周以上预订，五一期间价格涨幅可达 200-300%，含早餐更划算</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF8E53;font-weight:700;flex-shrink:0;">✓</span>珠海长隆等热门景点建议非高峰时段（开园前30分钟）入场，或选17:00后游玩</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF8E53;font-weight:700;flex-shrink:0;">✓</span>备用方案：如遇天气或交通变故，大横琴洲自然公园、海滨公园等免费景点可作替代</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#FF8E53;font-weight:700;flex-shrink:0;">✓</span>随身充电宝、防晒喷雾、便携雨伞、折叠水杯是五一标配</li>
+        </ul>
+      </div>
+
+      <!-- 拍照打卡指南 -->
+      <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,0.08);">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,#fd79a8,#e84393);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">📸</div>
+          <div style="font-weight:800;font-size:1.05rem;color:#2d3436;">拍照打卡机位</div>
+        </div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#e84393;font-weight:700;flex-shrink:0;">📍</span><strong>桂山岛</strong>：奶油灯塔正面仰拍 + 玻璃海退潮倒影 + 通往大海的路平视长焦</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#e84393;font-weight:700;flex-shrink:0;">📍</span><strong>情侣路</strong>：日落前1小时（约17:30-18:30）黄金时段逆光拍，长廊剪影最美</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#e84393;font-weight:700;flex-shrink:0;">📍</span><strong>日月贝</strong>：傍晚外景最佳，室内夜景可付费参观音乐厅</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#e84393;font-weight:700;flex-shrink:0;">📍</span><strong>大三巴牌坊</strong>：正面仰拍（早上人少），侧面弄堂感街拍，夜晚灯光版最出片</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:#555;line-height:1.6;"><span style="color:#e84393;font-weight:700;flex-shrink:0;">📍</span><strong>官也街</strong>：传统招牌+澳门小吃手持打卡，蛋挞+猪扒包是必拍CP</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- 紧急联系 -->
+    <div style="background:linear-gradient(135deg,#2d3436,#636e72);border-radius:20px;padding:28px 32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;">
+      <div>
+        <div style="color:#FFD93D;font-size:0.75rem;font-weight:700;letter-spacing:2px;margin-bottom:8px;">🆘 紧急联系</div>
+        <div style="color:#fff;font-size:1rem;font-weight:700;">出行遇到紧急情况，保持冷静，第一时间拨打：</div>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:12px 20px;text-align:center;">
+          <div style="color:#FF6B6B;font-size:1.2rem;font-weight:900;">110</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.75rem;">中国警察</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:12px 20px;text-align:center;">
+          <div style="color:#4ECDC4;font-size:1.2rem;font-weight:900;">120</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.75rem;">急救电话</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:12px 20px;text-align:center;">
+          <div style="color:#FFD93D;font-size:1.2rem;font-weight:900;">999</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.75rem;">澳门急救</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:12px 20px;text-align:center;">
+          <div style="color:#a29bfe;font-size:1.2rem;font-weight:900;">853</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.75rem;">澳门区号</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 傻饭计划结尾 -->
+<section style="background:linear-gradient(135deg,#2d3436 0%,#636e72 100%);padding:64px 0;text-align:center;">
+  <div class="container">
+    <div style="max-width:640px;margin:0 auto;">
+      <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
+      <div class="sillyfan-logo" style="margin-bottom:20px;"><div class="sillyfan-box"><span class="sillyfan-text">傻饭计划</span></div><span class="sillyfan-en">SILLYFAN PROJECT</span></div>
+      <h2 style="font-size:clamp(1.2rem,3vw,1.8rem);font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:16px;">圆满归来！感谢同行</h2>
+      <p style="color:rgba(255,255,255,0.8);font-size:1rem;line-height:1.8;margin-bottom:32px;">
+        3天2夜，我们从<strong style="color:#FFD93D;">深圳宝安中心</strong>出发<br>
+        踏上了<strong style="color:#4ECDC4;">桂山岛的果冻海</strong>，漫步了<strong style="color:#FF6B6B;">珠海情侣路的落日</strong><br>
+        尝遍了<strong style="color:#FFD93D;">澳门的葡挞与猪扒包</strong>，再坐上夜班巴士安全回家<br>
+        <span style="font-size:0.9rem;opacity:0.7;display:block;margin-top:12px;">🚌 返程：拱北口岸公交站 约20:30 → 宝安中心 约22:00</span>
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
+        <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:20px 24px;min-width:130px;">
+          <div style="font-size:1.8rem;font-weight:900;color:#FFD93D;">3</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.85rem;">目的地</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:20px 24px;min-width:130px;">
+          <div style="font-size:1.8rem;font-weight:900;color:#4ECDC4;">≤¥1500</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.85rem;">人均总花费</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:20px 24px;min-width:130px;">
+          <div style="font-size:1.8rem;font-weight:900;color:#FF6B6B;">¥29.9</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.85rem;">巴士单程票价</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:20px;text-align:left;">
+        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;font-weight:700;letter-spacing:1px;margin-bottom:12px;">📌 本次攻略快速索引</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <a href="#dafan" onclick="event.preventDefault();document.getElementById('dafan').scrollIntoView({behavior:'smooth'})" style="color:rgba(255,255,255,0.8);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">🤝 搭饭出发计划</a>
+          <a href="#landmarks" onclick="event.preventDefault();document.getElementById('landmarks').scrollIntoView({behavior:'smooth'})" style="color:rgba(255,255,255,0.8);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">📷 绝美地标图鉴</a>
+          <a href="#itinerary" onclick="event.preventDefault();document.getElementById('itinerary').scrollIntoView({behavior:'smooth'})" style="color:rgba(255,255,255,0.8);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">📅 每日详细行程</a>
+          <a href="#hotels" onclick="event.preventDefault();document.getElementById('hotels').scrollIntoView({behavior:'smooth'})" style="color:rgba(255,255,255,0.8);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">🏨 五一住宿推荐</a>
+          <a href="#food" onclick="event.preventDefault();document.getElementById('food').scrollIntoView({behavior:'smooth'})" style="color:rgba(255,255,255,0.8);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">🍜 美食地图</a>
+          <a href="#budget" onclick="event.preventDefault();document.getElementById('budget').scrollIntoView({behavior:'smooth'})" style="color:rgba(255,255,255,0.8);font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">💰 预算计算器</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
